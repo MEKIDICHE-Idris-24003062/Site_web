@@ -1,0 +1,194 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+	  background-image: url(../image/font.jpg);
+    background-size: cover; 
+    background-position: center;
+    background-attachment: fixed;
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+h1
+{
+text-align: center;
+text-decoration: underline black;
+text-decoration-thickness: 7px;
+font-size: 4em;
+color: white;
+font-family: Arial, sans-serif;
+}	
+strong 
+{
+	text-decoration: underline;
+}
+
+h2
+{
+font-family: optimizespeed;
+text-decoration: underline;
+font-size: 300%;
+color: white;
+}
+
+h3
+{
+font-size: 500%;
+color: white;
+text-align: center;
+}
+
+p
+{
+font-size: 180%;
+color: white;
+font-family: optimizespeed;
+
+}
+
+video
+{
+    width: 50em;
+    height: 30em;
+}
+
+.image img{
+    width: 25em;
+    transition: all 0.3s ease-in-out;
+}
+
+.image img:hover{
+    transform: scale(1.1);
+}
+.image {
+    margin-top: 2em; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: auto;
+    max-width: 100%;
+}
+
+footer {
+    color: white;          
+    padding: 5%;        
+    text-align: center;     
+  }
+
+.agent{
+    background: var(--podium-cds-color-grey-100);
+  font-size: 0;
+  width: 100%;
+  -webkit-scroll-snap-align: start;
+  -moz-scroll-snap-align: start;
+  -ms-scroll-snap-align: start;
+  scroll-snap-align: start;
+  aspect-ratio: 1 / 1.25;
+}
+ 
+.imagedelagent{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 35em;
+    z-index: -2;
+}
+
+.legrandtitre h1 {
+  text-transform: uppercase;
+  font-size: 5em;
+}
+
+
+/* From Uiverse.io by david-mohseni */ 
+.wrapper {
+    display: inline-flex;
+    list-style: none;
+    height: 120px;
+    width: 100%;
+    padding-top: 40px;
+    font-family: "Poppins", sans-serif;
+    justify-content: center;
+  }
+  
+  .wrapper .icon {
+    position: relative;
+    background: black;
+    border-radius: 50%;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #fff;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+  .wrapper .icon:hover span,
+  .wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  .wrapper .twitter:hover,
+  .wrapper .twitter:hover .tooltip,
+  .wrapper .twitter:hover .tooltip::before {
+    background: #1da1f2;
+    color: #fff;
+  }
+  
+  .wrapper .instagram:hover,
+  .wrapper .instagram:hover .tooltip,
+  .wrapper .instagram:hover .tooltip::before {
+    background: #e4405f;
+    color: #fff;
+  }
+  
+main p{
+  backdrop-filter: blur(5em);
+}
