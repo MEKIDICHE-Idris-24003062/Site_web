@@ -68,13 +68,16 @@ video
 .image img:hover{
     transform: scale(1.1);
 }
-.image {
+.image a {
     margin-top: 2em; 
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: auto;
     max-width: 100%;
+  border: 2em solid black;
+  border-radius: 10em;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 footer {
@@ -191,4 +194,16 @@ footer {
   
 main p{
   backdrop-filter: blur(5em);
+}
+
+.presentation{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2em;
+  margin: 2em;
+  border: 2em solid black;
+  border-radius: 1em;
+  background-color: rgba(0, 0, 0, 0.5);
 }
