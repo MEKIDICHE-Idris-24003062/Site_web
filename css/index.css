@@ -69,15 +69,25 @@ video
     transform: scale(1.1);
 }
 .image a {
-    margin-top: 2em; 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: auto;
-    max-width: 100%;
-  border: 2em solid black;
+  margin-top: 2em; 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: auto;
+  max-width: 100%;
   border-radius: 10em;
   background-color: rgba(0, 0, 0, 0.5);
+  width: max-content; 
+  
+}
+.image{
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  padding: auto;
+  max-width: 100%;
+  border-radius: 10em;
+  width: max-content;
 }
 
 footer {
@@ -206,4 +216,6 @@ main p{
   border: 2em solid black;
   border-radius: 1em;
   background-color: rgba(0, 0, 0, 0.5);
+  width: max-content;
+
 }
