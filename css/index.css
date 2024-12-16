@@ -219,3 +219,9 @@ main p{
   width: max-content;
 
 }
+.nom p{
+  font-size: 2em;
+  color: white;
+  font-family: Arial, sans-serif;
+  backdrop-filter: blur(0em);
+}
