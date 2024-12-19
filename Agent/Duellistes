@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title> Les Agents</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="image/favicon.ico">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="../Agent/">Les Agents</a></li>
+                <li><a href="duellistes.html">Les Duellistes</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Les Duellistes</h1>
+        <section>
+            <h2>Les Duellistes</h2>
+            <p>Les duellistes sont des personnages qui participent aux tournois de duel de monstres. Ils sont chargés de s'affronter en duel pour déterminer qui est le meilleur. Les duellistes sont reconnaissables à leur tenue de duel et à leur deck de cartes.</p>
+            <p>Les duellistes sont des personnages très populaires dans le monde du duel de monstres. Ils sont souvent suivis par des fans qui les encouragent lors des tournois.</p>
+        </section>
+        <main class= "image">
+        <a href="../les agents/Phoenix.html"><img src="../image/Phoenix.png" alt="phoenix"></a>
+        <div class= "nom"><p> phoenix</p></div>
+        <a href="../les agents/jett.html"><img src="../image/Jett.png" alt="jett"></a>
+        <div class= "nom"><p> jett</p></div>
+        <a href="../les agents/Reyna.html"><img src="../image/Reyna.png" alt="Reyna"></a>
+        <div class= "nom"><p> reyna</p></div>
+        <a href="../les agents/raze.html"><img src="../image/Raze.png" alt="raze"></a>
+        <div class= "nom"><p> raze</p></div>
+        <a href="../les agents/yoru1.html"><img src="../image/yoru.png" alt="yoru"></a>
+        <div class= "nom"><p> yoru</p></div>
+        <a href="../les agents/neon.html"><img src="../image/Neon.png" alt="neon"></a>
+        <div class= "nom"><p> neon</p></div>
+        
+        </main>
