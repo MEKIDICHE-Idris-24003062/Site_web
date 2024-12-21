@@ -15,6 +15,7 @@ body {
 a {
     color: white;
     text-decoration: none;
+    font-size: 3em;
 }
 
 h1
@@ -202,11 +203,41 @@ footer {
     color: #fff;
   }
   
-main p{
+main p {
   backdrop-filter: blur(5em);
+  color: white;
+  font-size: 2em;
+  font-family: Arial, sans-serif;
+  justify-content: left;
+  align-items: left;
+  flex-direction: left;
+  border-radius: 5em;
+  
 }
 
 .presentation{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2em;
+  margin: 2em;
+  border: 1em solid black;
+  border-radius: 1em;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: max-content;
+  backdrop-filter: blur(10em);
+
+}
+.nom p{
+  font-size: 3em;
+  color: white;
+  font-family: Arial, sans-serif;
+  backdrop-filter: blur(0em);
+  display: flex;
+}
+
+.instagramButton{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -217,11 +248,28 @@ main p{
   border-radius: 1em;
   background-color: rgba(0, 0, 0, 0.5);
   width: max-content;
-
+  backdrop-filter: blur(10em);
 }
-.nom p{
-  font-size: 4em;
-  color: white;
-  font-family: Arial, sans-serif;
-  backdrop-filter: blur(0em);
+
+
+nav {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    border-top: 4px solid #ff4655;
+    padding: 20px 0; 
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    padding: 20px 30px; 
+    font-weight: bold;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+
+menu a:hover {
+  color: #ff4655;
 }
