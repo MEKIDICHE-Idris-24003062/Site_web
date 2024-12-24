@@ -11,13 +11,13 @@ body {
     margin-bottom: 20px;
 }
 
-
+/* tout les textes */
 a {
     color: white;
     text-decoration: none;
     font-size: 3em;
 }
-
+/* tout les titre*/
 h1
 {
 text-align: center;
@@ -27,11 +27,14 @@ font-size: 4em;
 color: white;
 font-family: Arial, sans-serif;
 }	
+
+/* mettre en gras */
 strong 
 {
 	text-decoration: underline;
 }
 
+/* les titre plus petite */
 h2
 {
 font-family: optimizespeed;
@@ -40,6 +43,7 @@ font-size: 300%;
 color: white;
 }
 
+/* pas utiliser */
 h3
 {
 font-size: 500%;
@@ -47,14 +51,15 @@ color: white;
 text-align: center;
 }
 
+/* textes plus petit */
 p
 {
 font-size: 180%;
 color: white;
 font-family: optimizespeed;
-
 }
 
+/* la taille pour tout les vidéo*/
 video
 {
     width: 50em;
@@ -65,7 +70,7 @@ video
     width: 25em;
     transition: all 0.3s ease-in-out;
 }
-
+/* les images */
 .image img:hover{
     transform: scale(1.1);
 }
@@ -90,7 +95,7 @@ video
   border-radius: 10em;
   width: max-content;
 }
-
+/* le bas des pages */
 footer {
     color: white;          
     padding: 5%;        
@@ -272,4 +277,150 @@ nav a {
 
 menu a:hover {
   color: #ff4655;
+}
+
+/* les armes */
+
+.Armes_latérales {
+  margin-top: 2em; 
+  display: flex;
+  flex-wrap: wrap; 
+  padding: auto;
+  max-width: 100%;
+  border-radius: 10em;
+}
+
+.Armes_latérales {
+  display: flex;
+  flex-wrap: wrap;
+  padding: auto;
+  max-width: 100%;
+  border-radius: 3em;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: max-content;
+}
+
+/* les SMG */
+
+.SMG {
+  display: flex;
+  flex-wrap: wrap; 
+  padding: auto;
+  max-width: 100%;
+  border-radius: 10em;
+}
+
+.SMG {
+  margin-top: 5em; 
+  display: flex;
+  flex-wrap: wrap;
+  padding: auto;
+  max-width: 100%;
+  border-radius: 3em;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: max-content;
+}
+
+/* les fusils de Chasse */
+
+.Fusiliers_Chasse{
+  display: flex;
+  flex-wrap: wrap; 
+  padding: auto;
+  max-width: 100%;
+  border-radius: 10em;
+}
+
+.Fusiliers_Chasse{
+  margin-top: 5em; 
+  display: flex;
+  flex-wrap: wrap;
+  padding: auto;
+  max-width: 100%;
+  border-radius: 3em;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: max-content;
+}
+
+/* Rifles*/
+.Rifles {
+  display: flex;
+  flex-wrap: wrap; 
+  padding: auto;
+  max-width: 100%;
+  border-radius: 10em;
+}
+
+.Rifles {
+  margin-top: 5em; 
+  display: flex;
+  flex-wrap: wrap;
+  padding: auto;
+  max-width: 100%;
+  border-radius: 3em;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: max-content;
+}
+
+/*Rêne_de_tireur_d'élite*/
+
+.Rene_de_tireur_d_elite {
+  display: flex;
+  flex-wrap: wrap; 
+  padding: auto;
+  max-width: 100%;
+  border-radius: 10em;
+}
+
+.Rene_de_tireur_d_elite {
+  margin-top: 5em; 
+  display: flex;
+  flex-wrap: wrap;
+  padding: auto;
+  max-width: 100%;
+  border-radius: 3em;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: max-content;
+}
+
+/* Fusils_a_machine */
+
+.Fusils_a_machine {
+  display: flex;
+  flex-wrap: wrap; 
+  padding: auto;
+  max-width: 100%;
+  border-radius: 10em;
+}
+
+.Fusils_a_machine {
+  margin-top: 5em; 
+  display: flex;
+  flex-wrap: wrap;
+  padding: auto;
+  max-width: 100%;
+  border-radius: 3em;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: max-content;
+}
+
+/* Melee */
+
+.Melee {
+  display: flex;
+  flex-wrap: wrap; 
+  padding: auto;
+  max-width: 100%;
+  border-radius: 10em;
+}
+
+.Melee {
+  margin-top: 5em; 
+  display: flex;
+  flex-wrap: wrap;
+  padding: auto;
+  max-width: 100%;
+  border-radius: 3em;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: max-content;
 }
