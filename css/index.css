@@ -154,12 +154,15 @@ main p {
   display: flex;
 }
 
-
+.banner {
+  height: 10em;
+  width: 100%;
+  object-fit: cover;
+}
 nav {
     background-color: white;
     display: flex;
     justify-content: center;
-    border-top: 4px solid #ff4655;
 }
 
 nav a {
