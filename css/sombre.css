@@ -1,0 +1,352 @@
+body {
+    background-color: black;
+    background-size: cover; 
+    background-position: center;
+    background-attachment: fixed;
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+/* tout les textes */
+a {
+    color: black;
+    text-decoration: none;
+    font-size: 3em;
+}
+/* tout les titre*/
+h1
+{
+text-align: center;
+text-decoration: underline white;
+text-decoration-thickness: 7px;
+font-size: 4em;
+color: white;
+font-family: Arial, sans-serif;
+}	
+
+/* mettre en gras */
+strong 
+{
+	text-decoration: underline;
+}
+
+/* les titre plus petite */
+h2
+{
+font-family: optimizespeed;
+text-decoration: underline;
+font-size: 300%;
+color: white;
+}
+
+/* pas utiliser */
+h3
+{
+font-size: 500%;
+color: white;
+text-align: center;
+}
+
+/* textes plus petit */
+p
+{
+font-size: 180%;
+color: white;
+font-family: optimizespeed;
+}
+
+/* la taille pour tout les vidéo*/
+video
+{
+    width: 50em;
+    height: 30em;
+}
+
+.image img{
+    width: 25em;
+    transition: all 0.3s ease-in-out;
+}
+/* les images */
+.image img:hover{
+    transform: scale(1.1);
+}
+.image a {
+  margin-top: 2em; 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: auto;
+  max-width: 100%;
+  border-radius: 10em;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: max-content; 
+  
+}
+.image{
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  padding: auto;
+  max-width: 100%;
+  border-radius: 10em;
+  width: max-content;
+}
+/* le bas des pages */
+footer {
+    color: white;          
+    padding: 5%;        
+    text-align: center;     
+  }
+
+.agent{
+    background: var(--podium-cds-color-grey-100);
+  font-size: 0;
+  width: 100%;
+  -webkit-scroll-snap-align: start;
+  -moz-scroll-snap-align: start;
+  -ms-scroll-snap-align: start;
+  scroll-snap-align: start;
+  aspect-ratio: 1 / 1.25;
+}
+ 
+.imagedelagent{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 35em;
+    z-index: -2;
+}
+
+.legrandtitre h1 {
+  text-transform: uppercase;
+  font-size: 5em;
+}
+
+
+
+  
+main p {
+  backdrop-filter: blur(5em);
+  color: white;
+  font-size: 2em;
+  font-family: Arial, sans-serif;
+  justify-content: left;
+  align-items: left;
+  flex-direction: left;
+  border-radius: 5em;
+  
+}
+
+.presentation{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2em;
+  margin: 2em;
+  border: 1em solid white;
+  border-radius: 1em;
+  background-color: white(0, 0, 0, 0.5);
+  width: max-content;
+  backdrop-filter: blur(10em);
+
+}
+.nom p{
+  font-size: 3em;
+  color: white;
+  font-family: Arial, sans-serif;
+  backdrop-filter: blur(0em);
+  display: flex;
+}
+
+
+nav {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    border-top: 4px solid #ff4655;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    padding: 20px 30px; 
+    font-weight: bold;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+
+menu a:hover {
+  color: #ff4655;
+}
+
+/* les armes */
+
+.Armes_latérales {
+  margin-top: 2em; 
+  display: flex;
+  flex-wrap: wrap; 
+  padding: auto;
+  max-width: 100%;
+  border-radius: 10em;
+}
+
+.Armes_latérales {
+  display: flex;
+  flex-wrap: wrap;
+  padding: auto;
+  max-width: 100%;
+  border-radius: 3em;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: max-content;
+}
+
+/* les SMG */
+
+.SMG {
+  display: flex;
+  flex-wrap: wrap; 
+  padding: auto;
+  max-width: 100%;
+  border-radius: 10em;
+}
+
+.SMG {
+  margin-top: 5em; 
+  display: flex;
+  flex-wrap: wrap;
+  padding: auto;
+  max-width: 100%;
+  border-radius: 3em;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: max-content;
+}
+
+/* les fusils de Chasse */
+
+.Fusiliers_Chasse{
+  display: flex;
+  flex-wrap: wrap; 
+  padding: auto;
+  max-width: 100%;
+  border-radius: 10em;
+}
+
+.Fusiliers_Chasse{
+  margin-top: 5em; 
+  display: flex;
+  flex-wrap: wrap;
+  padding: auto;
+  max-width: 100%;
+  border-radius: 3em;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: max-content;
+}
+
+/* Rifles*/
+.Rifles {
+  display: flex;
+  flex-wrap: wrap; 
+  padding: auto;
+  max-width: 100%;
+  border-radius: 10em;
+}
+
+.Rifles {
+  margin-top: 5em; 
+  display: flex;
+  flex-wrap: wrap;
+  padding: auto;
+  max-width: 100%;
+  border-radius: 3em;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: max-content;
+}
+
+/*Rêne_de_tireur_d'élite*/
+
+.Rene_de_tireur_d_elite {
+  display: flex;
+  flex-wrap: wrap; 
+  padding: auto;
+  max-width: 100%;
+  border-radius: 10em;
+}
+
+.Rene_de_tireur_d_elite {
+  margin-top: 5em; 
+  display: flex;
+  flex-wrap: wrap;
+  padding: auto;
+  max-width: 100%;
+  border-radius: 3em;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: max-content;
+}
+
+/* Fusils_a_machine */
+
+.Fusils_a_machine {
+  display: flex;
+  flex-wrap: wrap; 
+  padding: auto;
+  max-width: 100%;
+  border-radius: 10em;
+}
+
+.Fusils_a_machine {
+  margin-top: 5em; 
+  display: flex;
+  flex-wrap: wrap;
+  padding: auto;
+  max-width: 100%;
+  border-radius: 3em;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: max-content;
+}
+
+/* Melee */
+
+.Melee {
+  display: flex;
+  flex-wrap: wrap; 
+  padding: auto;
+  max-width: 100%;
+  border-radius: 10em;
+}
+
+.Melee {
+  margin-top: 5em; 
+  display: flex;
+  flex-wrap: wrap;
+  padding: auto;
+  max-width: 100%;
+  border-radius: 3em;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: max-content;
+}
+
+.accueil a {
+  text-align: center;
+  font-size: 2em;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.accueil h2 {
+  text-align: center;
+  font-size: 3em;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+
+.accueil h1 {
+  text-align: center;
+  font-size: 6em;
+  color: white;
+  font-family: Arial, sans-serif;
+}
