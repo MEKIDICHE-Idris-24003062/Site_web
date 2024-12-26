@@ -10,7 +10,7 @@ body {
 
 /* tout les textes */
 a {
-    color: white;
+    color: black;
     text-decoration: none;
     font-size: 3em;
 }
@@ -18,7 +18,7 @@ a {
 h1
 {
 text-align: center;
-text-decoration: underline black;
+
 text-decoration-thickness: 7px;
 font-size: 4em;
 color: white;
@@ -29,9 +29,8 @@ font-family: Arial, sans-serif;
 h2
 {
 font-family: optimizespeed;
-text-decoration: underline;
 font-size: 300%;
-color: white;
+color: black;
 }
 
 /* pas utiliser */
@@ -45,8 +44,8 @@ text-align: center;
 /* textes plus petit */
 p
 {
-font-size: 180%;
-color: white;
+font-size: 200%;
+color: black;
 font-family: optimizespeed;
 }
 
@@ -116,6 +115,7 @@ footer {
 .legrandtitre h1 {
   text-transform: uppercase;
   font-size: 5em;
+  color: black;
 }
 
 
@@ -133,19 +133,11 @@ main p {
   
 }
 
-.presentation{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 2em;
-  margin: 2em;
-  border: 1em solid black;
-  border-radius: 1em;
-  background-color: rgba(0, 0, 0, 0.5);
-  width: max-content;
-  backdrop-filter: blur(10em);
+
+.presentation iframe {
+  margin-top: 3em; 
 }
+
 .nom p{
   font-size: 3em;
   color: white;
@@ -159,10 +151,21 @@ main p {
   width: 100%;
   object-fit: cover;
 }
+
 nav {
     background-color: white;
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 100%;
+    font-size: 100%;
 }
 
 nav a {
@@ -175,155 +178,40 @@ nav a {
 }
 
 
+
 menu a:hover {
   color: #ff4655;
 }
 
 /* les armes */
 
-.Armes_latérales {
-  margin-top: 2em; 
+.Arme {
+  margin-top: 3em; 
   display: flex;
   flex-wrap: wrap; 
   padding: auto;
-  max-width: 100%;
-  border-radius: 10em;
+  max-width: 100%;;
+  border-radius: 3em;
+  background-color: rgba(196, 190, 190, 0.911);
+  width: max-content;
 }
 
-.Armes_latérales {
+.Arme img {
+  width: 15em;
+  transition: all 50s ease-in-out;
+  margin-right: 1em;
+}
+
+.explication {
   display: flex;
   flex-wrap: wrap;
   padding: auto;
   max-width: 100%;
-  border-radius: 3em;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(196, 190, 190, 0.911);
   width: max-content;
+  border-radius: 2em;
 }
 
-/* les SMG */
-
-.SMG {
-  display: flex;
-  flex-wrap: wrap; 
-  padding: auto;
-  max-width: 100%;
-  border-radius: 10em;
-}
-
-.SMG {
-  margin-top: 5em; 
-  display: flex;
-  flex-wrap: wrap;
-  padding: auto;
-  max-width: 100%;
-  border-radius: 3em;
-  background-color: rgba(0, 0, 0, 0.5);
-  width: max-content;
-}
-
-/* les fusils de Chasse */
-
-.Fusiliers_Chasse{
-  display: flex;
-  flex-wrap: wrap; 
-  padding: auto;
-  max-width: 100%;
-  border-radius: 10em;
-}
-
-.Fusiliers_Chasse{
-  margin-top: 5em; 
-  display: flex;
-  flex-wrap: wrap;
-  padding: auto;
-  max-width: 100%;
-  border-radius: 3em;
-  background-color: rgba(0, 0, 0, 0.5);
-  width: max-content;
-}
-
-/* Rifles*/
-.Rifles {
-  display: flex;
-  flex-wrap: wrap; 
-  padding: auto;
-  max-width: 100%;
-  border-radius: 10em;
-}
-
-.Rifles {
-  margin-top: 5em; 
-  display: flex;
-  flex-wrap: wrap;
-  padding: auto;
-  max-width: 100%;
-  border-radius: 3em;
-  background-color: rgba(0, 0, 0, 0.5);
-  width: max-content;
-}
-
-/*Rêne_de_tireur_d'élite*/
-
-.Rene_de_tireur_d_elite {
-  display: flex;
-  flex-wrap: wrap; 
-  padding: auto;
-  max-width: 100%;
-  border-radius: 10em;
-}
-
-.Rene_de_tireur_d_elite {
-  margin-top: 5em; 
-  display: flex;
-  flex-wrap: wrap;
-  padding: auto;
-  max-width: 100%;
-  border-radius: 3em;
-  background-color: rgba(0, 0, 0, 0.5);
-  width: max-content;
-}
-
-/* Fusils_a_machine */
-
-.Fusils_a_machine {
-  display: flex;
-  flex-wrap: wrap; 
-  padding: auto;
-  max-width: 100%;
-  border-radius: 10em;
-}
-
-.Fusils_a_machine {
-  margin-top: 5em; 
-  display: flex;
-  flex-wrap: wrap;
-  padding: auto;
-  max-width: 100%;
-  border-radius: 3em;
-  background-color: rgba(0, 0, 0, 0.5);
-  width: max-content;
-}
-
-/* Melee */
-
-.Melee {
-  display: flex;
-  flex-wrap: wrap; 
-  padding: auto;
-  max-width: 100%;
-  border-radius: 10em;
-}
-
-.Melee {
-  margin-top: 5em; 
-  display: flex;
-  flex-wrap: wrap;
-  padding: auto;
-  max-width: 100%;
-  border-radius: 3em;
-  background-color: rgba(0, 0, 0, 0.5);
-  width: max-content;
-}
 
 .accueil a {
   text-align: center;
@@ -344,12 +232,13 @@ menu a:hover {
 
 .présentationdevalorant h2 {
     text-align: left;
-    font-size: 6em;
+    font-size: 300%;
     color: #720000;
     font-family: Arial, sans-serif;
     text-decoration: 0em;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
+
 }
 
 .menu h1 {
@@ -361,15 +250,68 @@ menu a:hover {
     margin-top: 0.7em;
 }
 
+
+
+.page_agent img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-width: 5em;
+  max-height: 5em;
+  border-radius: 50%;
+  justify-content: right;
+}
+
+.armes h1 {
+  color: #720000;
+  font-size: 5em;
+}
+
+.armes h2 {
+  color: #720000;
+  text-align: left;
+  font-size: 4em;
+}
+.armes h3 {
+  color: black;
+  text-align: left;
+  font-size: 350%;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+}
+
+.armes p {
+  color: black;
+  font-size: 3em;
+  text-align: left;
+}
+
+.armes a {
+  color: black;
+  font-size: 3em;
+  text-align: left;
+}
+
+/* le footer */
+
+footer .socials a:hover svg {
+  fill: black;
+}
+
+footer .socials a svg {
+  width: 1em;
+  height: 1.5em;
+  margin: 0 20px;
+  fill: white;
+}
+
+
+
 /* le footer */
 .container {
   text-align: center;
 }
 
-.container p {
-  color: black;
-  font-size: 1.5em;
-}
 .reviews {
   display: flex;
   justify-content: center;
@@ -398,7 +340,7 @@ menu a:hover {
 }
 
 .commenter {
-  font-size: 12px;
+  font-size: 1.5em;
   color: gray;
 }
 
@@ -407,15 +349,8 @@ menu a:hover {
 }
 
 .socials p {
-  margin-bottom: 10px;
+  margin-bottom: 1em;
   color: white;
-  font-size: 18px;
-}
-
-.icons img {
-  width: 40px;
-  height: 40px;
-  margin: 0 10px;
 }
 
 .feedback-button {
@@ -426,6 +361,7 @@ menu a:hover {
   color: #f95d5d;
   border-radius: 20px;
   cursor: pointer;
+  font-size: 1.5em;
 }
 
 .feedback-button:hover {
