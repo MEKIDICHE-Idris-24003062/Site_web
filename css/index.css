@@ -6,6 +6,7 @@ body {
     list-style-type: disc;
     margin-left: 20px;
     margin-bottom: 20px;
+    margin: 0;
 }
 
 /* tout les textes */
@@ -89,9 +90,9 @@ video
 
 /* le bas des pages */
 footer {
-    color: white;          
-    padding: 5%;        
-    text-align: center;     
+    color: white;                  
+    text-align: center;
+    background-color: white;     
   }
 
 .agent{
@@ -120,9 +121,6 @@ footer {
   font-size: 5em;
   color: black;
 }
-
-
-
   
 main p {
   backdrop-filter: blur(5em);
@@ -161,15 +159,13 @@ nav {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    padding: 20px 0;
-    border-radius: 10px;
-    margin-bottom: 20px;
     width: 100%;
     top: 0;
     z-index: 1000;
     height: 100%;
     font-size: 100%;
     margin: 2em;
+    margin: 0;
 }
 
 nav a {
@@ -304,7 +300,7 @@ footer .socials a svg {
   width: 1em;
   height: 1.5em;
   margin: 0 20px;
-  fill: white;
+  fill: #720000;
 }
 
 .container {
