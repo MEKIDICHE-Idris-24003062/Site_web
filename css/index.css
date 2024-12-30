@@ -37,7 +37,7 @@ color: black;
 h3
 {
 font-size: 500%;
-color: white;
+color: black;
 text-align: center;
 }
 
@@ -106,7 +106,8 @@ footer {
 }
  
 .imagedelagent{
-    position: fixed;
+    position: left;
+    width: 100%;
     top: 0;
     right: 0;
     bottom: 0;
@@ -168,6 +169,7 @@ nav {
     z-index: 1000;
     height: 100%;
     font-size: 100%;
+    margin: 2em;
 }
 
 nav a {
@@ -180,7 +182,7 @@ nav a {
 }
 nav h1 {
   text-align: left;
-  font-size: 3em;
+  font-size: 2.6em;
   color: #720000;
   font-family: Arial, sans-serif;
   text-decoration: 0em;
@@ -305,14 +307,9 @@ footer .socials a svg {
   fill: white;
 }
 
-
-
-/* le footer */
 .container {
   text-align: center;
   padding: 1em;
-  
-  
 }
 
 .reviews {
@@ -353,7 +350,6 @@ footer .socials a svg {
 
 .socials p {
   margin-bottom: 1em;
-  color: white;
 }
 
 .feedback-button {
@@ -371,6 +367,7 @@ footer .socials a svg {
 .feedback-button a {
   color:  #f95d5d;
   text-align: center;
+  font-size: 2em;
 }
 
 .feedback-button:hover {
@@ -389,7 +386,7 @@ select {
 }
 
 .group a{
-  color : white;
+  color : black;
 }
 
 .mercibutton {
