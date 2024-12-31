@@ -337,11 +337,10 @@ menu a:hover {
 
 .feedback-button {
   background-color: white;
+  color: white;
   border: none;
   padding: 10px 20px;
-  font-size: 16px;
-  color: #f95d5d;
-  border-radius: 20px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
@@ -398,18 +397,4 @@ footer .socials a svg {
   height: 1.5em;
   margin: 0 20px;
   fill: white;
-}
-
-
-.feedback-button {
-  background-color: #8b0000;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.feedback-button:hover {
-  background-color: black;
 }
