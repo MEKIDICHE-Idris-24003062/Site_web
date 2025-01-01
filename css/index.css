@@ -1,9 +1,12 @@
 html, body {
-  margin: 0;
-  padding: 0;
+    background: linear-gradient(to bottom, #D80000, #FF6565);
+    background-size: cover; 
+    background-position: center;
+    background-attachment: fixed;
+    list-style-type: disc;
+    margin: 0;
+    padding: 0;
 }
-
-
 
 /* tous les textes */
 a {
