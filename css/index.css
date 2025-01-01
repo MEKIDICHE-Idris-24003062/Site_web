@@ -172,10 +172,11 @@ p {
   font-weight: bold;
 }
 
-.presentation iframe {
+.presentation {
   margin-top: 3em; 
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .nom p{
