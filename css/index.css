@@ -125,7 +125,7 @@ footer {
 
 main p {
   backdrop-filter: blur(5em);
-  color: white;
+  color: black;
   font-size: 2em;
   font-family: Arial, sans-serif;
   justify-content: left;
