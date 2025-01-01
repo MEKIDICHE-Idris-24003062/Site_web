@@ -367,6 +367,8 @@ menu a:hover {
   color: #720000;
   text-align: left;
   font-size: 4em;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
 }
 .armes h3 {
   color: black;
