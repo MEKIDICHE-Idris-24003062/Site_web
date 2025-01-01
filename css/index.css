@@ -3,13 +3,7 @@ html, body {
   padding: 0;
 }
 
-body {
-    background: linear-gradient(to bottom, #D80000, #FF6565);
-    background-size: cover; 
-    background-position: center;
-    background-attachment: fixed;
-    list-style-type: disc;
-}
+
 
 /* tous les textes */
 a {
