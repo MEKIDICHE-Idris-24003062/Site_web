@@ -410,3 +410,57 @@ footer .socials a svg {
   font-weight: bold;
   
 }
+
+.duellistes {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.duellistes h1 {
+  font-size: 2.5rem;
+  color: #e94560;
+}
+
+.duellistes .description {
+  font-size: 1rem;
+  margin: 1rem auto;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+.agents-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.agent {
+  text-align: center;
+  background-color: #292929;
+  padding: 10em;
+  border-radius: 10px;
+  width: 300px;
+}
+
+.agent img {
+  width: 100%;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.agent .name {
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+.agent img:hover{
+  transform: scale(1.1);
+}
+
+.agent .name {
+  margin-top: 1;
+  font-size: 1.5rem;  
+  color: white;
+}
+
