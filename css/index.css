@@ -349,6 +349,19 @@ menu a:hover {
   text-align: center;
 }
 
+.Arme {
+  display: flex;
+  margin: 0 auto;
+  width: 80%;
+  flex-wrap: wrap;
+  padding: auto;
+  max-width: 100%;
+  background-color: rgba(220, 215, 215, 0.911);
+  width: 80%;
+  border-radius: 2em;
+  margin-top: 30px;
+}
+
 .armes h1 {
   color: #720000;
   font-size: 5em;
