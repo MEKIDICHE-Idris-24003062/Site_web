@@ -215,6 +215,7 @@ menu a:hover {
   background-color: rgba(220, 215, 215, 0.911);
   width: max-content;
   border-radius: 2em;
+  width: 80%;
 }
 
 .accueil a {
@@ -502,5 +503,58 @@ footer .socials a svg {
   border: none;
   border-radius: 5px;
 }
+
+/* Pour le responsive */
+@media (max-width: 1380px) {
+  menu {
+    gap: 30px;
+    align-items: center;
+    padding: 2em;
+  }
+
+  .menu a {
+    font-size: 35px;
+    transform: translateX(-80px);
+    white-space: nowrap;
+  }
+  
+  .menu h1 {
+    font-size: 30px; 
+    transform: translateX(-20px);
+    align-items: center;
+  }
+
+  nav{
+    
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 1100px) {
+  menu {
+    margin right: 10px;
+    align-items: center;
+  }
+
+  .menu a {
+    font-size: 27px; 
+    transform: translateX(-80px);
+    white-space: nowrap;
+  }
+  
+  .menu h1 {
+    font-size: 22px; 
+    transform: translateX(-20px);
+    align-items: center;
+  }
+
+  nav{
+    align-items: center;
+    gap: 5px
+  }
+} 
+
 
 
