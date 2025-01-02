@@ -480,8 +480,55 @@ footer .socials a svg {
   font-size: 1.5rem;  
   color: white;
 }
-.formulaire {
+.container {
   text-align: center;
+  margin: 0 auto;
+  padding: 1em
+}
+
+.feedback-form {
+  background-color: rgba(255, 0, 0, 0.7);
+  padding: 50px;
+  border-radius: 2em;
+  display: inline-block;
+  text-align: left;
+  width: 30em;
+}
+
+.feedback-form h2 {
+  text-align: center;
+}
+
+.feedback-form label {
+  display: block;
+  margin: 1em 1em;
+}
+
+.feedback-form input[type="text"],
+.feedback-form input[type="radio"] {
+  margin-bottom: 10px;
+}
+
+.feedback-form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.feedback-form button:hover {
+  background-color: #ffe6e6;
+}
+
+.feedback-form input[type="text"] {
+  width: 70%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
 }
 
 
