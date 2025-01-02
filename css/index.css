@@ -122,9 +122,11 @@ footer {
 
 main p {
   backdrop-filter: blur(5em);
-  color: black;
+  color: white;
   font-size: 2em;
-  font-family: Arial, sans-serif;
+  font-family: 'Julius Sans One', sans-serif;
+  line-height: 120%;
+  letter-spacing: -0.66px;
   justify-content: left;
   align-items: left;
   flex-direction: left;
@@ -201,7 +203,6 @@ nav {
     z-index: 100;
 }
 
-
 nav a {
     text-decoration: none;
     font-family: "Jaini", sans-serif;
@@ -269,14 +270,16 @@ menu a:hover {
 
 
 .présentationdevalorant h2 {
-  text-align: left;
-  font-size: 300%;
-  color: #720000;
-  font-family: Arial, sans-serif;
-  text-decoration: 0em;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-
+  text-align: justify;
+  font-family: "New Rocker";
+  font-size: 85px;
+  font-style: normal;
+  line-height: 120%; /* 102px */
+  letter-spacing: -2.55px;
+  background: linear-gradient(180deg, #720000 19.46%, #D80000 39.93%);
+  -webkit-background-clip: text;
+  opacity: 0.7; 
+  -webkit-text-fill-color: #600000; /* Une couleur sombre pour le texte (rouge foncé ici) */
 }
 
 /* le footer */
@@ -463,3 +466,6 @@ footer .socials a svg {
   font-size: 1.5rem;  
   color: white;
 }
+
+
+
