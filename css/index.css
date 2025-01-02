@@ -57,35 +57,7 @@ video
     height: 30em;
 }
 
-.image img{
-    width: 9em;
-    transition: all 0.3s ease-in-out;
-}
-/* les images */
-.image img:hover{
-    transform: scale(1.1);
-}
-.image a {
-  margin-top: 2em; 
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: auto;
-  max-width: 100%;
-  border-radius: 10em;
-  background-color: rgba(0, 0, 0, 0.5);
-  width: max-content; 
-  
-}
-.image{
-  display: flex;
-  flex-wrap: wrap; 
-  justify-content: center;
-  padding: auto;
-  max-width: 100%;
-  border-radius: 10em;
-  width: max-content;
-}
+
 /* le bas des pages */
 footer {
     color: white;          
