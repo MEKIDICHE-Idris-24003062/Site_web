@@ -126,9 +126,8 @@ main p {
   font-family: 'Julius Sans One', sans-serif;
   line-height: 120%;
   letter-spacing: -0.66px;
-  margin: 0 auto;
+  text-align: center;
 }
-
 main {
   padding: 2em;
 }
@@ -209,7 +208,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #FF6565; /* Changement de couleur lors du survol */
+    color: #FF6565; 
 }
 
 
@@ -246,7 +245,6 @@ menu a:hover {
   border-radius: 2em;
 }
 
-
 .accueil a {
   text-align: center;
   font-size: 2em;
@@ -263,18 +261,22 @@ menu a:hover {
   font-family: Arial, sans-serif;
 }
 
+.accueil p {
+  width: 90%; 
+  margin: 0 auto;
+}
 
 .présentationdevalorant h2 {
   text-align: justify;
   font-family: "New Rocker";
   font-size: 85px;
   font-style: normal;
-  line-height: 120%; /* 102px */
+  line-height: 120%; 
   letter-spacing: -2.55px;
   background: linear-gradient(180deg, #720000 19.46%, #D80000 39.93%);
   -webkit-background-clip: text;
   opacity: 0.7; 
-  -webkit-text-fill-color: #600000; /* Une couleur sombre pour le texte (rouge foncé ici) */
+  -webkit-text-fill-color: #600000; 
 }
 
 /* le footer */
@@ -348,13 +350,30 @@ menu a:hover {
 }
 
 .page_agent img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  max-width: 5em;
-  max-height: 5em;
-  border-radius: 50%;
-  justify-content: right;
+  max-width: 5em;   
+  max-height: 5em;        
+  object-fit: cover;   
+  float: right;           
+  align-content: center;
+}
+
+.page_agent h2 {
+  text-align: justify;
+  font-family: "New Rocker";
+  font-size: 120px;
+  font-style: normal;
+  line-height: 120%; 
+  letter-spacing: -1.2px;
+  background: linear-gradient(180deg, #720000 19.46%, #D80000 39.93%);
+  -webkit-background-clip: text;
+  opacity: 0.7; 
+  -webkit-text-fill-color: #600000;
+}
+
+.page_agent p {
+  font-family: inherit;
+  font-weight: 700;
+  text-align: center;
 }
 
 .armes h1 {
