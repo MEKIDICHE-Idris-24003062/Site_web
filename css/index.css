@@ -94,7 +94,7 @@ footer {
 
 main p {
   color: white;
-  font-size: 2em;
+  font-size: 3em;
   font-family: 'Julius Sans One', sans-serif;
   line-height: 120%;
   letter-spacing: -0.66px;
@@ -229,7 +229,7 @@ menu a:hover {
 .accueil h1 {
   text-decoration: 0em;
   text-align: center;
-  font-size: 3em;
+  font-size: 4em;
   color: black;
   font-family: Arial, sans-serif;
 }
