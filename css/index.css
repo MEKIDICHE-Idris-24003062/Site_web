@@ -8,6 +8,15 @@ html, body {
     padding: 0;
 }
 
+body {
+  background-image: url('../image/fond_astra_et_yoru.jpg');
+  background-size: cover; 
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0; 
+  height: 100%; /* Assure que le body occupe toute la hauteur de la fenêtre */
+} 
+
 /* tous les textes */
 a {
     color: black;
@@ -214,7 +223,7 @@ width: 80%;
 flex-wrap: wrap;
 padding: auto;
 max-width: 100%;
-background-color: rgba(220, 215, 215, 0.7);
+background-color: rgba(220, 215, 215, 0.911);
 width: 80%;
 border-radius: 2em;
 }
