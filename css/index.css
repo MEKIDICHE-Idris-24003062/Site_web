@@ -126,7 +126,7 @@ main p {
   font-family: 'Julius Sans One', sans-serif;
   line-height: 120%;
   letter-spacing: -0.66px;
-  text-align: center;
+  margin: 0 auto;
 }
 
 main {
