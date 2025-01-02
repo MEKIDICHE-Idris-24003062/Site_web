@@ -8,13 +8,13 @@ html, body {
     padding: 0;
 }
 
-body {
+.imagedefond {
   background-image: url('../image/fond_astra_et_yoru.jpg');
   background-size: cover; 
   background-position: center;
   background-attachment: fixed;
   margin: 0; 
-  height: 100%; /* Assure que le body occupe toute la hauteur de la fenêtre */
+  height: 100%; 
 } 
 
 /* tous les textes */
