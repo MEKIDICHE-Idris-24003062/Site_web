@@ -681,4 +681,8 @@ gap: 5px
 }
 } 
 
+iframe {
+width: 65em;
+height: 40em;
+}
 
