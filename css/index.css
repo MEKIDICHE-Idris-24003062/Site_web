@@ -286,7 +286,6 @@ color: #ff4655;
   z-index: 1; /* Assure que le contenu est au-dessus de la bande */
   border: 5px solid #000000; /* Contour rose autour du tableau */
   border-radius: 15px;
-  height: 130px;/* Centré horizontalement dans la page */
 }
 
 
