@@ -7,6 +7,7 @@ list-style-type: disc;
 margin: 0;
 padding: 0;
 }
+
 /* Actualités */
 .actualites {     
 padding: 40px 0;         
@@ -15,12 +16,12 @@ padding: 40px 0;
 .actualites-conteneur {
 display: flex;              
 justify-content: center; 
-gap: 30px;                 
+gap: 10px;                 
 flex-wrap: wrap;         
 }
 
 .actualite-img {
-width: 600px;                
+width: 400px;                
 height: auto;             
 object-fit: cover;       
 border-bottom: 5px solid #ddd;
@@ -28,15 +29,18 @@ border-bottom: 5px solid #ddd;
 
 .date {
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-font-size: 25px;            
-color: #000000;                
+font-size: 20px;            
+color: #000000;  
+text-align: left;              
 }
 
 .titre-actualite {
 font-size: 30px;           
 color: #000000;                
 font-weight: bold;        
-margin-top: 10px;          
+margin-top: 10px;  
+width: 400px;        
+text-align: left;
 }
 
 .titre-banniere {
@@ -269,33 +273,90 @@ color: #ff4655;
 }
 
 /* les armes */
-
-.Arme {
-margin-top: 3em; 
-display: flex;
-flex-wrap: wrap; 
-padding: auto;
-max-width: 100%;;
-border-radius: 3em;
-background-color: rgba(220, 215, 215, 0.911);
-width: max-content;
+.tableau {
+  position: relative; /* Nécessaire pour positionner la bande derrière */
+  display: flex; /* Active flexbox */
+  flex-wrap: wrap; /* Permet de gérer plusieurs lignes si nécessaire */
+  justify-content: center; /* Centre le contenu horizontalement */
+  align-items: center; /* Centre le contenu verticalement */
+  gap: 50px; /* Espacement entre les armes */
+  width: 90%; /* Prend toute la largeur de la page */
+  padding: 20px; /* Hauteur de la bande */
+  margin: 40px auto; /* Ajoute de l'espace autour et centre horizontalement */
+  z-index: 1; /* Assure que le contenu est au-dessus de la bande */
+  border: 5px solid #000000; /* Contour rose autour du tableau */
+  border-radius: 15px;
+  height: 130px;/* Centré horizontalement dans la page */
 }
 
-.Arme img {
-width: 15em;
-transition: all 50s ease-in-out;
-margin-right: 1em;
+
+.tableau::before {
+  content: ''; /* Nécessaire pour ajouter un pseudo-élément */
+  position: absolute; /* Positionné par rapport à .tableau */
+  top: 0;
+  left: 0;
+  width: 100%; /* Prend toute la largeur de la bande */
+  height: 100%; /* Même hauteur que le tableau */
+  background-color: rgba(214, 204, 205, 0.7); /* Rose avec 80% d'opacité */
+  z-index: -1; /* Place la bande derrière le contenu */
+  border-radius: 10px; /* Facultatif : coins arrondis */
 }
+.arme {
+  position: relative;
+  width: 200px; /* Ajuste cette largeur si nécessaire */
+  height: 100%; /* Assure que la hauteur de l'élément suit celle du tableau */
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  display: flex; /* Ajoute flexbox ici aussi */
+  align-items: center; /* Centre l'image verticalement dans .arme */
+  justify-content: center;
+  transition: all 0.3s ease; /* Centre l'image horizontalement dans .arme */
+}
+
+.arme img {
+  width: 100%; /* S'adapte à la largeur du conteneur */
+  height: auto; /* Garde les proportions */
+  object-fit: contain; /* Ne recadre pas l'image */
+  transition: transform 0.3s ease;
+}
+
+.arme:hover img {
+  width: 100%; /* S'adapte à la largeur du conteneur */
+  height: auto; /* Garde les proportions */
+  object-fit: cover;; /* Zoom léger au survol */
+}
+
+.nom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Filtre noir transparent */
+  display: flex;
+  justify-content: center; /* Centre horizontalement le texte */
+  align-items: center; /* Centre verticalement le texte */
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.arme:hover .nom {
+  opacity: 1; /* Le filtre devient visible */
+}
+
 
 .explication {
 display: flex;
 margin: 0 auto;
+font-size: 10px;
 width: 80%;
 flex-wrap: wrap;
 padding: auto;
 max-width: 100%;
 background-color: rgba(220, 215, 215, 0.911);
-width: 80%;
 border-radius: 2em;
 }
 
@@ -451,20 +512,15 @@ text-align: center;
 
 .Arme {
 display: flex;
-margin: 0 auto;
-width: 80%;
 flex-wrap: wrap;
+margin: 0 auto;
+font-size: 13px;
+width: 92%;
 padding: auto;
 max-width: 100%;
-background-color: rgba(220, 215, 215, 0.911);
-width: 80%;
+background-color: rgba(187, 101, 132, 0.911);
 border-radius: 2em;
 margin-top: 30px;
-}
-
-.armes h1 {
-color: #720000;
-font-size: 5em;
 }
 
 .armes h2 {
@@ -479,13 +535,19 @@ color: black;
 text-align: left;
 font-size: 350%;
 margin-top: 0.3em;
-margin-bottom: 0.3em;
+margin-bottom: 0.1em;
+margin-left: 30px;
+margin-right: 30px;
 }
 
 .armes p {
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 color: black;
-font-size: 3em;
+font-size: 2em;
 text-align: left;
+margin-left: 30px;
+margin-right: 30px;
+margin-bottom: 20px;
 }
 
 .armes a {
@@ -629,6 +691,22 @@ border: none;
 border-radius: 5px;
 }
 
+.hautpage {
+  background: rgb(202, 121, 159);
+  border-radius: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  cursor: pointer;
+}
+
+.fleche-haut {
+  width: 50px;
+}
+
 /* Pour le responsive */
 @media (max-width: 1380px) {
 menu {
@@ -685,4 +763,3 @@ iframe {
 width: 45em;
 height: 26em;
 }
-
