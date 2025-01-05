@@ -1,4 +1,4 @@
-# Site web sur Valorant - Idris Imen Karmen
+# Site web sur Valorant - idrismm kirito0116 Karmen-r
 # Présentation  
 
 Un site web interactif qui vous montre le visuel du jeu ainsi que des informations sur les armes, les agents et leurs catégories dans **Valorant**. Découvrez les statistiques, caractéristiques et visuels des armes et des agents pour mieux maîtriser vos choix en jeu. Vous y trouverez des vidéos sur les capacités des agents.
