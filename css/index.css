@@ -13,6 +13,14 @@ padding: 0;
 padding: 40px 0;         
 }
 
+.actualites h2 {
+text-align: center;
+text-decoration-thickness: 7px;
+font-size: 4em;
+color: white;
+font-family: Arial, sans-serif;
+}
+
 .actualites-conteneur {
 display: flex;              
 justify-content: center; 
