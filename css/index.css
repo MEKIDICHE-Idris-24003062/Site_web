@@ -210,9 +210,8 @@ font-family: "New Rocker";
 font-size: 40px;
 display: flex;
 justify-content: flex-start;
-
-
 }
+
 .menu {
 display: flex;
 gap: 10px;
