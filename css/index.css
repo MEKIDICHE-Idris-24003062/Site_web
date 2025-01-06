@@ -46,12 +46,13 @@ text-align: left;
 .titre-banniere {
 font-family: 'New Rocker';
 position: absolute;
-top: 50%;
+top: 10%;
 left: 50%;
 transform: translate(-50%, -50%);
-font-size: 10em; /* Ajustez la taille du texte selon vos besoins */
-color: rgb(255, 255, 255); /* Choisissez la couleur du texte */
+font-size: 10em;
+color: rgb(255, 255, 255);
 font-weight: bold;
+text-align: center;
 }
 
 .imagedefond {
