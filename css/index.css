@@ -164,7 +164,27 @@ font-size: 5em;
 color: black;
 }
 
-
+.bouton {
+    position: absolute;
+    top: 100px; 
+    left: 20px;
+  }
+  
+  button {
+    font-family: 'Jaini', sans-serif;
+    padding: 8px 25px; 
+    font-size: 25px; 
+    background-color: #808080; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  button:hover {
+    background-color: #414344; 
+  }
 main p {
 color: white;
 font-size: 3em;
