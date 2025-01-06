@@ -747,7 +747,7 @@ transform: translateX(-80px);
 white-space: nowrap;
 }
 
-.menu h1 {
+.menu h2 {
 font-size: 30px; 
 transform: translateX(-20px);
 align-items: center;
@@ -773,7 +773,7 @@ transform: translateX(-80px);
 white-space: nowrap;
 }
 
-.menu h1 {
+.menu h2 {
 font-size: 22px; 
 transform: translateX(-20px);
 align-items: center;
