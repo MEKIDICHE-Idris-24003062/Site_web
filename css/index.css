@@ -150,6 +150,14 @@ justify-content: flex-end;
 align-items: center; 
 }
 
+.imagedelagent img {
+  height: 80vh; 
+  max-width: 90%; 
+  object-fit: contain; 
+  max-height: 100%; 
+  width: auto; 
+}
+
 .legrandtitre h1 {
 text-transform: uppercase;
 font-size: 5em;
