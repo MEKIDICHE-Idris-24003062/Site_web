@@ -19,19 +19,22 @@
           <h1 class="titre-banniere"> VALORANT</h1>
       </div>
       <nav class="menu">
-        <h2>VALORANT</h2>
-        <a href="index.html">Accueil</a>
-        <a href="Agent/main.html">Agents</a>
-        <a href="lesarmes/main.html">Armes</a>
-        <a href="avis/main.html">Votre Avis</a>
-        <a class="hautpage" href="#ancre"><img class="fleche-haut" src="image/fleche.svg" alt="fleche-haut"></a>
-        
-      </nav>
+        <h2><a href="main.html">VALORANT</a></h2>
+        <button id="boutonmenu" aria-label="Afficher le menu">☰</button>
+        <div id="liens-menu" class="liens-menu">
+          <a href="Agent/main.html">Agents</a>
+          <a href="lesarmes/main.html">Armes</a>
+          <a href="avis/main.html">Votre Avis</a>
+          <a class="hautpage" href="#ancre">
+            <img class="fleche-haut" src="image/fleche.svg" alt="fleche-haut">
+          </a>
+        </div>
+        <button id="toggle-mode" class="mode-toggle" onclick="toggleMode()">Mode Sombre</button>
+      </nav> 
   </header>
-    <button id="toggle-mode" class="mode-toggle" onclick="toggleMode()">Mode Sombre</button>
     <script src="JavaScript/thème.js"></script>
     <main class="accueil">
-      <h1>Bienvenue dans l’univers de Valorant</h1>
+      <h1 class="titreaccueil">Bienvenue dans l’univers de Valorant</h1>
       <p>Là où stratégie, précision et adrénaline se rencontrent pour 
         des affrontements inoubliables !<p>
       <div class="presentation">
@@ -48,22 +51,21 @@
         classiques avec des éléments modernes pour offrir une expérience 
         de jeu compétitive inoubliable.
       </a>
-    </section>
-
+    </section> 
     <section class="actualites">
-      <h2>ACTUALITÉS</h2>
+      <h2 class="titreaccueil">ACTUALITÉS</h2>
       <div class="actualites-conteneur">
-        <article class="bulle-actualite">
+        <article>
           <img src="./image/actu1.jpg" alt="Saison 2025 VCT" class="actualite-img">
           <p class="date">26/11/24</p>
           <h3 class="titre-actualite">Lancement de la saison 2025 VCT</h3>
         </article>
-        <article class="bulle-actualite">
+        <article>
           <img src="./image/actu2.jpg" alt="top 10 streamers" class="actualite-img">
           <p class="date">14/12/24</p>
           <h3 class="titre-actualite">Top 10 des streamers Valorant français 2024</h3>
         </article>
-        <article class="bulle-actualite">
+        <article>
           <img src="./image/actu3.jpg" alt="skin araxys" class="actualite-img">
           <p class="date">10/12/24</p>
           <h3 class="titre-actualite">Les skins ARAXYS 2.0 arrivent !</h3>
@@ -117,6 +119,7 @@
       </div>
     </div>
     <div> <a href="mailto:idris.mekidiche@etu.univ-amu.fr">Contactez-nous</a> </div>
-  </footer>  
+  </footer>
+  <script src="./JavaScript/main.js"></script>  
 </body>
 </html>
