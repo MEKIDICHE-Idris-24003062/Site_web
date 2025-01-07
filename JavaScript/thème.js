@@ -1,15 +1,24 @@
-// changer le 
+// Sélectionne le bouton et le body
 const toggleButton = document.getElementById('toggle-mode');
-  const body = document.body;
+const body = document.body;
 
-  toggleButton.addEventListener('click', () => {
-    // Basculer la classe "sombre" sur le body
-    body.classList.toggle('sombre');
+// Vérifie si le mode sombre est activé dans le stockage local
+const darkMode = localStorage.getItem('sombre');
 
-    // Basculer le texte du bouton
-    if (body.classList.contains('sombre')) {
-        toggleButton.textContent = 'Mode Jour';
-    } else {
-      toggleButton.textContent = 'Mode Sombre';
-    }
-  });
+if (darkMode === 'enabled') {
+  body.classList.add('sombre');
+  toggleButton.textContent = 'Mode Jour';
+}
+
+// Ajoute un événement de clic pour basculer entre les modes
+toggleButton.addEventListener('click', () => {
+  if (body.classList.contains('sombre')) {
+    body.classList.remove('sombre');
+    toggleButton.textContent = 'Mode Sombre';
+    localStorage.setItem('sombre', 'disabled'); // Enregistre l'état dans LocalStorage
+  } else {
+    body.classList.add('sombre');
+    toggleButton.textContent = 'Mode Jour';
+    localStorage.setItem('sombre', 'enabled'); // Enregistre l'état dans LocalStorage
+  }
+});
