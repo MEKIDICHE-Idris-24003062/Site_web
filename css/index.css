@@ -64,7 +64,7 @@ text-align: center;
 }
 
 .imagedefond {
-background-image: url('../image/fond_astra_et_yoru.jpg');
+background-image: url('../image/fondastrayoru.jpg');
 background-size: cover; 
 background-position: center;
 background-attachment: fixed;
@@ -73,7 +73,7 @@ height: 100%;
 } 
 
 .fondavis {
-background-image: url('../image/fond-avis.jpg');
+background-image: url('../image/fondavis.jpg');
 background-size: cover; 
 background-position: center;
 background-attachment: fixed;
@@ -671,7 +671,7 @@ padding: 2em;
 
 .feedback-form {
 background-color: #FF6565;
-opacity: 0.9;
+opacity: 0.8;
 padding: 40px;
 border-radius: 2em;
 display: inline-block;
