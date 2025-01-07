@@ -529,14 +529,14 @@ align-content: center;
 .page_agent h2 {
 text-align: justify;
 font-family: "New Rocker";
-font-size: 120px;
+font-size: 60px;
 font-style: normal;
-line-height: 120%; 
-letter-spacing: -1.2px;
-background: linear-gradient(180deg, #720000 19.46%, #D80000 39.93%);
+line-height: 130%; 
+letter-spacing: -1px;
+background: linear-gradient(180deg, #720000 20%, #D80000 40%);
 -webkit-background-clip: text;
-opacity: 0.7; 
--webkit-text-fill-color: #600000;
+opacity: 1; 
+-webkit-text-fill-color: transparent;
 }
 
 .page_agent p {
