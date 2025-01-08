@@ -1,17 +1,26 @@
-function changeTheme() {
-    const link = document.getElementById('theme');
-    const currentTheme = link.href.includes('sombre.css') ? 'sombre.css' : 'index.css';
-    const newTheme = currentTheme === 'sombre.css' ? 'index.css' : 'sombre.css';
+// Récupérer les éléments HTML
+const link = document.querySelectorAll('link[href*=".css"]');
+const button = document.getElementById('theme-btn');
 
-    // Vérifier si on est sur index.html ou une autre page
-    if (window.location.pathname.endsWith("index.html")) {
-        // Comportement pour index.html
-        link.href = `css/${newTheme}`;
-        localStorage.setItem('selected-theme', newTheme);
-    } else {
-        // Comportement pour les autres pages dans HTML/
-        link.href = `../css/${newTheme}`;
-        localStorage.setItem('selected-theme', newTheme);
-        console.log(newTheme)
+// Définir les chemins des fichiers CSS
+const lightTheme = 'CSS/index.css';
+const darkTheme = 'CSS/sombre.css';
+
+// Vérifier le thème actuel
+let currentTheme = link[0].href;
+
+// Ajouter un écouteur d'événement sur le bouton
+button.addEventListener('click', () => {
+  // Alterner entre les thèmes
+  if (currentTheme === lightTheme) {
+    for (let i = 0; i < link.length; i++) {
+      link[i].href = link[i].href.replace(lightTheme, darkTheme);
     }
-}
+    currentTheme = darkTheme;
+  } else {
+    for (let i = 0; i < link.length; i++) {
+      link[i].href = link[i].href.replace(darkTheme, lightTheme);
+    }
+    currentTheme = lightTheme;
+  }
+});
