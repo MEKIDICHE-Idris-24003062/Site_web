@@ -12,12 +12,18 @@
 
 <body class="imagedefond">
     <nav class="menu">
-      <h1>VALORANT</h1>
-      <a href="../index.html">Accueil</a>
-      <a href="../Agent/main.html">Agents</a>
-      <a href="main.html">Armes</a>
-      <a href="../avis/main.html">Votre Avis</a>
-    </nav>
+      <h2><a href="../index.html">VALORANT</a></h2>
+      <button id="boutonmenu" aria-label="Afficher le menu">☰</button>
+      <div id="liens-menu" class="liens-menu">
+        <a href="../Agent/main.html">Agents</a>
+        <a href="../lesarmes/main.html">Armes</a>
+        <a href="../avis/main.html">Votre Avis</a>
+      </div>
+      <a class="hautpage" href="#ancre">
+        <img class="fleche-haut" src="../image/fleche.svg" alt="fleche-haut">
+      </a>
+      <button id="toggle-mode" class="mode-toggle" onclick="toggleMode()">Mode Sombre</button>
+    </nav> 
     <button id="toggle-mode" class="mode-toggle" onclick="toggleButton()">Mode Sombre</button>
     <script src="../JavaScript/thème.js"></script>
     <main class="armes">
@@ -250,5 +256,6 @@
         <div> <a href="mailto:idris.mekidiche@etu.univ-amu.fr">Contactez-nous</a> </div>
       </div>
     </footer>
+     <script src="../JavaScript/main.js"></script>
 </body>
 </html>
