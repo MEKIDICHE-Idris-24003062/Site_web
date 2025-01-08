@@ -9,15 +9,20 @@
     <link rel="icon" href="../image/favicon.ico">
     <link rel="stylesheet" href="../css/index.css">
 </head>
-<body id="ancre">
-    <nav class="menu">
-        <h2>VALORANT</h2>
-        <a href="../index.html">Accueil</a>
+<body>
+    <nav id="ancre" class="menu">
+      <h2><a href="../index.html">VALORANT</a></h2>
+      <button id="boutonmenu" aria-label="Afficher le menu">☰</button>
+      <div id="liens-menu" class="liens-menu">
         <a href="../Agent/main.html">Agents</a>
         <a href="../lesarmes/main.html">Armes</a>
         <a href="../avis/main.html">Votre Avis</a>
-        <a class="hautpage" href="#ancre"><img class="fleche-haut" src="../image/fleche.svg" alt="fleche-haut"></a>
-      </nav>
+      </div>
+      <a class="hautpage" href="#ancre">
+        <img class="fleche-haut" src="../image/fleche.svg" alt="fleche-haut">
+      </a>
+      <button id="toggle-mode" class="mode-toggle" onclick="toggleMode()">Mode Sombre</button>
+    </nav>
     <main>
       <h1>LES CONTROLEURS</h1>
         <p>Les contrôleurs de KaibaCorp veillent au respect des règles, supervisent les tournois et assurent la distribution des prix. 
