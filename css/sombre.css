@@ -1,6 +1,4 @@
-css sombre
-
-body { /*style générale de la page*/
+html, body { /*style générale de la page*/
     background : linear-gradient(to bottom , rgb(1,5,59) , rgb(26,67,169)); /*Fond dégradé de bleu foncé à bleu clair */
     background-size: cover; 
     background-position: center;
@@ -9,10 +7,18 @@ body { /*style générale de la page*/
     margin : 0;
     padding: 0;
 }
+
 /* Actualités */
 .actualites {     
     padding: 40px 0;         
     }
+    .actualites h2 {
+      text-align: center;
+      text-decoration-thickness: 7px;
+      font-size: 4em;
+      color: white;
+      font-family: Arial, sans-serif;
+      }
     
     .actualites-conteneur { /* conteneur principale pour afficher les actualités */
     display: flex;              
@@ -42,35 +48,44 @@ body { /*style générale de la page*/
         width: 400px;        
         text-align: left;
         }
+
+        .date {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          font-size: 20px;            
+          color: #000000;  
+          text-align: left;              
+          }
         
         .titre-banniere {  /* Titre principal affiché sur une bannière */ 
-        font-family: 'New Rocker';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 10em; /* Ajustez la taille du texte selon vos besoins */
-        color: rgb(255, 255, 255); /* Choisissez la couleur du texte */
-        font-weight: bold;
+          font-size: 10em;
+          top: 15%;
+          transform: translate(-50%, -50%);
+          font-family: 'New Rocker';
+          color: rgb(255, 255, 255);
+          position: absolute;
+          top: 10%;
+          left: 50%;
+          font-weight: bold;
+          text-align: center;
         }
         
-        .imagedefond { /* Image de fond pour la page principale */ 
-        background-image: url('../image/fond_astra_et_yoru.jpg');
-        background-size: cover; 
-        background-position: center;
-        background-attachment: fixed;
-        margin: 0; 
-        height: 100%; 
-        } 
+        .imagedefond {
+          background-image: url('../image/fondastrayoru.jpg');
+          background-size: cover; 
+          background-position: center;
+          background-attachment: fixed;
+          margin: 0; 
+          height: 100%; 
+          } 
         
-        .fondavis { /* Image de fond pour la section des avis */
-        background-image: url('../image/fond-avis.jpg');
-        background-size: cover; 
-        background-position: center;
-        background-attachment: fixed;
-        margin: 0; 
-        height: 100%; 
-        } 
+          .fondavis {
+            background-image: url('../image/fondavis.jpg');
+            background-size: cover; 
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0; 
+            height: 100%; 
+            } 
 /* tout les textes */
 a {
     color: white;
@@ -146,7 +161,51 @@ display: flex;
 justify-content: flex-end; 
 align-items: center; 
 }
+.imagedelagent img {
+  height: 80vh; 
+  max-width: 90%; 
+  object-fit: contain; 
+  max-height: 100%; 
+  width: auto; 
+  }
 
+  
+.boutton a{
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 0.5em;
+  }
+  
+  .boutton a:hover{
+  background-color: red;
+  }
+  
+  .bouton {
+    position: absolute;
+    top: 100px; 
+    left: 20px;
+    }
+    
+    button {
+    font-family: 'Jaini', sans-serif;
+    padding: 8px 25px; 
+    font-size: 25px; 
+    background-color: #808080; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    
+    button:hover {
+    background-color: #414344; 
+    }
+    
 .legrandtitre h1 { /*  un grand titre affiché */
 text-transform: uppercase;
 font-size: 5em;
@@ -183,14 +242,13 @@ justify-content: flex-start;
 
 }
 .menu { /* Barre de navigation principale */ 
-display: flex;
-gap: 10px;
-padding: 9px;
-background-color: black;/*couleur de fond de la barre de menu */
-width: 100%;
-height: 65px;
-flex-shrink: 0;
-margin-top: auto ;
+  display: flex;
+  justify-content: space-between;  
+  background-color: rgb(20, 7, 71);
+  width: 100%;
+  max-width: 100vw;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 .menu a{ /*couleur et taille des boutons du menu */
@@ -220,9 +278,9 @@ display: flex;
 width: 100%;
 display: block;
 object-fit: cover;
-height: 400px;
+height: 50vh;
 flex-shrink: 0;
-opacity: 0.6;
+opacity: 0.4;
 }
 
 .filtre {
@@ -238,6 +296,32 @@ width: 100%;
 height: 100%;
 background-color: rgba(0, 0, 0, 0.5); /* Fond noir avec opacité de 0.5 */
 z-index: 1;  /* S'assure que la superposition est au-dessus de l'image */
+}
+
+.liens-menu {
+  display: none;
+  flex-direction: column; /* Disposer les liens verticalement */
+  gap: 10px; /* Espacement entre les liens */
+  background-color: white;
+  position: absolute;
+  top: 65px; /* Positionner en dessous du header */
+  left: 0;
+  right: 0;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.liens-menu a {
+  text-decoration: none;
+  font-family: "Jaini", sans-serif;
+  color: rgb(28, 23, 179);
+  justify-content: space-evenly; 
+  font-size: 40px; 
+  transition: color 0.3s ease; 
+  }
+
+/* Affichage des liens lorsque le menu est actif */
+.liens-menu.actif {
+  display: flex; /* Afficher les liens lorsque le menu est actif */
 }
 
 nav { /*barre de navigation en haut de la page */
@@ -261,7 +345,7 @@ transition: color 0.5s ease;
 }
 
 nav a:hover {
-color: #1A43A9; 
+color: #091d51; 
 }
 
 
@@ -309,14 +393,14 @@ color: #1A43A9;
   display: flex; /* Ajoute flexbox ici aussi */
   align-items: center; /* Centre l'image verticalement dans .arme */
   justify-content: center;
-  transition: all 0.5s ease; /* Centre l'image horizontalement dans .arme */
+  transition: all 0.3s ease; /* Centre l'image horizontalement dans .arme */
 }
 
 .arme img {
   width: 100%; /* S'adapte à la largeur du conteneur */
   height: auto; /* Garde les proportions */
   object-fit: contain; /* Ne recadre pas l'image */
-  transition: transform 0.5s ease;
+  transition: transform 0.s ease;
 }
 
 .arme:hover img {
@@ -413,6 +497,8 @@ width: 90%;
 /* le footer */
 .container {
   text-align: center;
+  margin: 0 auto;
+  padding: 2em;
   }
   
   .container p {
@@ -704,59 +790,186 @@ width: 90%;
     width: 50px;
   }
 
-/* Pour le responsive */
-@media (max-width: 1380px) {
-  menu {
-  gap: 30px;
+
+/* le bouton pour changre de mode  */
+.mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #414344;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.mode-toggle:hover {
+  background-color: #ff4655;
+}
+
+
+@media (max-width: 768px) {
+
+.menu {
+  align-items: center; 
+  flex-direction: column;
   align-items: center;
-  padding: 2em;
+  text-align: center;
+  gap: 10px;
+  padding:10px;
+  height: auto;
+  position: fixed;
+}
+
+.menu h2 a{ 
+  font-size: 25px; 
   }
-  
-  .menu a {
-  font-size: 35px;
-  transform: translateX(-80px);
-  white-space: nowrap;
+
+.liens-menu {
+  position: fixed;
+  display: none; /* Masquer le menu par défaut */
+  flex-direction: column;
+  gap: 10px;
+  background-color: white;
+  position: absolute; /* Positionner absolument par rapport au bouton */
+  top: 100%; /* Le menu apparaît juste en dessous du bouton */
+  left: 0;
+  right: 0;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1; /* Assure que le menu est sous le bouton */
+}
+
+/* Affichage du bouton de menu aligné à droite sur les petits écrans */
+.boutonmenu {
+  display: inline-block;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  margin-left: auto;
+  z-index: 2;
+}
+.liens-menu a {
+  font-size: 30px ;
+}
+
+.titre-banniere {
+  font-size: 4em;
+}
+
+.menu h2 {
+  margin: 0 60px; 
+  font-size: 20px;
+}
+
+.menu a {
+font-size: 30px;
+}
+
+.titreaccueil {
+  font-size: 2em;
+}
+
+.main p {
+  font-size: 1.5em;  /* Réduction de la taille de la police */
+  line-height: 1.4;  /* Augmentation de l'interligne pour une meilleure lisibilité */
+  letter-spacing: -0.5px;
+}
+
+.actualites h2 {
+font-size: 2em;
+}
+
+.actualite-img {
+width: 100%; /* Ajuste les images à la largeur de l'écran */
+}
+
+.titre-actualite {
+font-size: 1.5em;
+width: 100%;
+}
+
+.arme {
+width: 150px;
+}
+
+.explication {
+font-size: 0.9em;
+width: 100%;
+padding: 20px;
+}
+
+.feedback-form {
+width: 90%;
+font-size: 0.8em;
+}
+
+.feedback-form h2 {
+font-size: 2em;
+}
+
+iframe {
+width: 30em;
+height: 16em;
+}
+
+.agent {
+width: 100%;
+padding: 5em;
+border-radius: 10px;
+}
+
+.agent img {
+width: 80%;
+}
+
+.agent .name {
+font-size: 1.2rem;
+}
+
+.duellistes h1 {
+font-size: 1.5rem;
+}
+
+.duellistes .description {
+font-size: 0.9rem;
+}
+
+.banniere {
+height: 20vh;
+}
+
+.hautpage {
+right: 20px;
+bottom: 20px;
+}
+
+.fleche-haut {
+width: 30px;
+
+}
+}
+
+@media (min-width: 769px) and (max-width: 980px) {
+
+  .titre-banniere {
+    font-size: 5em;
   }
-  
-  .menu h1 {
-  font-size: 30px; 
-  transform: translateX(-20px);
-  align-items: center;
+
+  .banniere {
+    height: 30vh;
   }
-  
-  nav{
-  
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  }
-  }
-  
-  @media (max-width: 1100px) {
-  menu {
-  margin-right: 10px;
-  align-items: center;
-  }
-  
-  .menu a {
-  font-size: 27px; 
-  transform: translateX(-80px);
-  white-space: nowrap;
-  }
-  
-  .menu h1 {
-  font-size: 22px; 
-  transform: translateX(-20px);
-  align-items: center;
-  }
-  
-  nav{
-  align-items: center;
-  gap: 5px
-  }
-  } 
   
   iframe {
-  width: 45em;
-  height: 26em;
+    width: 30em;
+    height: 16em;
   }
+  .main p {
+    font-size: 12px;  /* Réduction de la taille de la police */
+  }
+}
