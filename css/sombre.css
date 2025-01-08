@@ -764,7 +764,7 @@ opacity: 0.7;
 /* le bouton pour changre de mode  */
 .mode-toggle {
   position: fixed;
-  top: 20px;
+  top: 3em;
   right: 20px;
   padding: 10px 20px;
   font-size: 18px;
