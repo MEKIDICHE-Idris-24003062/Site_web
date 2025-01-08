@@ -226,12 +226,8 @@ color: #1A43A9;
 margin: 0;
 text-align: center;
 font-family: "New Rocker";
-font-size: 40px;
-display: flex;
-justify-content: flex-start;
-
-
 }
+
 .menu { /* Barre de navigation principale */ 
   display: flex;
   justify-content: space-between;  
@@ -240,6 +236,9 @@ justify-content: flex-start;
   max-width: 100vw;
   padding: 0 1rem;
   box-sizing: border-box;
+}
+.menu h2 {
+  margin: 0;
 }
 
 .menu a{ /*couleur et taille des boutons du menu */
@@ -764,7 +763,7 @@ opacity: 0.7;
 /* le bouton pour changre de mode  */
 .mode-toggle {
   position: fixed;
-  top: 3em;
+  top: 20px;
   right: 20px;
   padding: 10px 20px;
   font-size: 18px;
