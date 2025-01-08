@@ -11,13 +11,18 @@
 </head>
 <body>
     <nav id="ancre" class="menu">
-      <h2>VALORANT</h2>
-      <a href="../index.html">Accueil</a>
-      <a href="../Agent/main.html">Agents</a>
-      <a href="../lesarmes/main.html">Armes</a>
-      <a href="../avis/main.html">Votre Avis</a>
-	    <a class="hautpage" href="#ancre"><img class="fleche-haut" src="../image/fleche.svg" alt="fleche-haut"></a>
-    </nav>
+      <h2><a href="../index.html">VALORANT</a></h2>
+      <button id="boutonmenu" aria-label="Afficher le menu">☰</button>
+      <div id="liens-menu" class="liens-menu">
+        <a href="../Agent/main.html">Agents</a>
+        <a href="../lesarmes/main.html">Armes</a>
+        <a href="../avis/main.html">Votre Avis</a>
+      </div>
+      <a class="hautpage" href="#ancre">
+        <img class="fleche-haut" src="../image/fleche.svg" alt="fleche-haut">
+      </a>
+      <button id="toggle-mode" class="mode-toggle" onclick="toggleMode()">Mode Sombre</button>
+    </nav> 
     <main>
       <h1>Sentinelles</h1>
       <p>Les sentinelles de KaibaCorp assurent le respect des règles, supervisent les tournois et gèrent la distribution des prix. 
