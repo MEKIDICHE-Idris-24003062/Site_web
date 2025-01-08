@@ -433,7 +433,7 @@ margin: 0 auto;
 font-size: 10px;
 width: 80%;
 flex-wrap: wrap;
-padding: auto;
+padding: 0;
 max-width: 100%;
 background-color: rgba(220, 215, 215, 0.911);
 border-radius: 2em;
@@ -506,7 +506,7 @@ flex-wrap: wrap;
 margin: 0 auto;
 font-size: 13px;
 width: 92%;
-padding: auto;
+padding: 0;
 max-width: 100%;
 background-color: rgba(187, 101, 132, 0.911);
 border-radius: 2em;
@@ -603,7 +603,7 @@ transform: scale(1.1);
 }
 
 .agent .name {
-margin-top: 1;
+margin-top: 0;
 font-size: 1.5rem;  
 color: white;
 }
