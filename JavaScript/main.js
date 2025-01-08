@@ -1,36 +1,70 @@
-// Fonction pour afficher/masquer le menu
-function toggleMenuById(boutonmenu) {
-    const menu = document.getElementById(boutonmenu);
-    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-  }
-  
-  // Initialisation des événements
-  document.addEventListener('DOMContentLoaded', () => {
+// Fonction pour changer le fichier CSS
+function changeTheme(theme) {
+    const link = document.getElementById('lientheme');
+    link.href = theme;
+
+    // Sauvegarder le thème sélectionné dans le stockage local
+    localStorage.setItem('selected-theme', theme);
+
+    // Masquer le menu après sélection
+    document.getElementById('theme-menu').style.display = 'none';
+}
+
+// Fonction pour changer le thème (mode sombre / mode clair)
+function toggleMode() {
+    const link = document.getElementById('lientheme'); // Le lien qui contient le fichier CSS
+    const currentTheme = link.getAttribute('href');
+    
+    if (currentTheme === 'css/index.css') { // Mode sombre
+        link.setAttribute('href', 'css/sombre.css');
+        document.getElementById('toggle-mode').textContent = 'Mode Clair';
+        localStorage.setItem('theme', 'sombre');
+    } else { // Mode clair
+        link.setAttribute('href', 'css/index.css');
+        document.getElementById('toggle-mode').textContent = 'Mode Sombre';
+        localStorage.setItem('theme', 'clair');
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Vérifier la préférence de thème dans localStorage
+    const savedTheme = localStorage.getItem('theme');
+    const link = document.getElementById('lientheme');
+    const button = document.getElementById('toggle-mode');
+    
+    if (savedTheme === 'sombre') {
+        link.setAttribute('href', 'css/sombre.css');
+        button.textContent = 'Mode Clair';
+    } else {
+        link.setAttribute('href', 'css/index.css');
+        button.textContent = 'Mode Sombre';
+    }
+
+    // Initialiser selon les préférences système (optionnel)
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    if (!savedTheme && prefersDarkScheme) {
+        link.setAttribute('href', 'css/sombre.css');
+        button.textContent = 'Mode Clair';
+    }
+
     // Bouton pour le menu déroulant
     const boutonMenu = document.getElementById('boutonmenu');
-    const liensMenuId = 'liens-menu'; // ID de la div contenant les liens du menu
-  
-    if (boutonMenu) {
-      boutonMenu.addEventListener('click', () => {
-        const liensMenu = document.getElementById(liensMenuId);
-        liensMenu.classList.toggle('actif'); // Ajoute/retire la classe 'actif'
-      });
-    } else {
-      console.error('Le bouton de menu est introuvable.');
+    const liensMenu = document.getElementById('liens-menu');
+    if (boutonMenu && liensMenu) {
+        boutonMenu.addEventListener('click', () => {
+            liensMenu.classList.toggle('actif'); // Ajoute/retire la classe 'actif'
+        });
     }
-  
-    // Bouton pour remonter en haut de la page
+
+    // Bouton pour remonter en haut de la page avec un défilement fluide
     const hautpage = document.querySelector('.hautpage');
     if (hautpage) {
-      hautpage.addEventListener('click', () => {
-        window.scrollTo({
-          top: 0,
-          left: 0,
-          behavior: 'smooth',
+        hautpage.addEventListener('click', (event) => {
+            event.preventDefault(); // Empêche le comportement par défaut
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Défilement fluide natif
+            });
         });
-      });
-    } else {
-      console.error('Le bouton pour remonter en haut de la page est introuvable.');
     }
-  });
-  
+});
