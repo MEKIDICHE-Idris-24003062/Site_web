@@ -6,6 +6,9 @@ const button = document.getElementById('theme-btn');
 const lightTheme = 'CSS/index.css';
 const darkTheme = 'CSS/sombre.css';
 
+// Vérifier si la page actuelle est index.html
+const isIndexHtml = window.location.pathname.endsWith('index.html');
+
 // Vérifier le thème actuel
 let currentTheme = link[0].href;
 
@@ -14,12 +17,20 @@ button.addEventListener('click', () => {
   // Alterner entre les thèmes
   if (currentTheme === lightTheme) {
     for (let i = 0; i < link.length; i++) {
-      link[i].href = link[i].href.replace(lightTheme, darkTheme);
+      if (isIndexHtml) {
+        link[i].href = link[i].href.replace(lightTheme, darkTheme);
+      } else {
+        link[i].href = link[i].href.replace(lightTheme, '../' + darkTheme);
+      }
     }
     currentTheme = darkTheme;
   } else {
     for (let i = 0; i < link.length; i++) {
-      link[i].href = link[i].href.replace(darkTheme, lightTheme);
+      if (isIndexHtml) {
+        link[i].href = link[i].href.replace(darkTheme, lightTheme);
+      } else {
+        link[i].href = link[i].href.replace(darkTheme, '../' + lightTheme);
+      }
     }
     currentTheme = lightTheme;
   }
