@@ -463,31 +463,41 @@ cursor: pointer;
 background-color: #ffe6e6;
 }
 
-.page_agent img {
-max-width: 5em;   
-max-height: 5em;        
-object-fit: cover;   
-float: right;           
-align-content: center;
+.page_agent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 10px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #c73d3d;
 }
 
+/* Titre des catégories d'agents */
 .page_agent h2 {
-text-align: justify;
-font-family: "New Rocker";
-font-size: 120px;
-font-style: normal;
-line-height: 120%; 
-letter-spacing: -1.2px;
-background: linear-gradient(180deg, #720000 19.46%, #D80000 39.93%);
--webkit-background-clip: text;
-opacity: 0.7; 
--webkit-text-fill-color: #600000;
+  font-size: 1.8rem;
+  margin: 0;
+  flex: 1;
+  text-align: left;
 }
 
+/* Images dans les sections */
+.page_agent img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  margin-left: 20px;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+/* Texte des descriptions */
 .page_agent p {
-font-family: inherit;
-font-weight: 700;
-text-align: center;
+  flex: 2;
+  margin: 0 20px;
+  text-align: justify;
 }
 
 .Arme {
@@ -771,7 +781,7 @@ fill: white;
 /* le bouton pour changre de mode  */
 .mode-toggle {
   position: fixed;
-  top: 3em;
+  top: 20px;
   right: 20px;
   padding: 10px 20px;
   font-size: 18px;
@@ -921,6 +931,30 @@ width: 80%;
 
 .agent .name {
 font-size: 1.2rem;
+}
+
+.page_agent {
+  flex-direction: column; /* Empile les éléments en colonne */
+  align-items: center; /* Centre les éléments horizontalement */
+  padding: 10px; /* Réduit les marges internes */
+}
+
+.page_agent h2 {
+  font-size: 1.5rem; /* Réduit la taille du titre */
+  text-align: center; /* Centre le titre */
+  margin-bottom: 10px; /* Ajoute de l'espacement avec le texte ou l'image */
+}
+
+.page_agent img {
+  width: 100%; /* Image prend toute la largeur disponible */
+  max-width: 80px; /* Fixe une largeur maximale pour éviter qu'elle soit trop grande */
+  margin: 10px 0; /* Espacement autour de l'image */
+}
+
+.page_agent p {
+  margin: 10px 0; 
+  text-align: center; 
+  font-size: 25px;;
 }
 
 .duellistes h1 {
