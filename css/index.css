@@ -36,7 +36,7 @@ margin-top: 1em;
 .titreaccueil {
 text-decoration: 0em;
 text-align: center;
-font-size: 4em;
+font-size:4em;
 font-family: 'Bebas Neue', sans-serif;
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -122,6 +122,18 @@ nav {
   text-align: center;
   }
 
+  .presentationdevalorant h2 {
+    font-family: "New Rocker";
+    font-size: 85px;
+    font-style: normal;
+    line-height: 120%; 
+    letter-spacing: -2.55px;
+    background: linear-gradient(180deg, #720000 19.46%, #D80000 39.93%);
+    -webkit-background-clip: text;
+    opacity: 0.7; 
+    -webkit-text-fill-color: #01053b; 
+    }
+    
 /* Actualités */
 .actualites {     
 padding: 40px 0;         
@@ -314,6 +326,15 @@ display: flex;
 justify-content: center;
 width: 100%;
 }
+
+.presentationdevalorant a {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  font-family: 'Julius Sans One';
+  color: white;
+  width: 90%;
+  }
 
 .nom p{
 font-size: 3em;
@@ -839,18 +860,24 @@ font-size: 30px;
   font-size: 2em;
 }
 
-.main p {
-  font-size: 1.5em;  /* Réduction de la taille de la police */
+main p {
+  font-size: 1em;
   line-height: 1.4;  /* Augmentation de l'interligne pour une meilleure lisibilité */
   letter-spacing: -0.5px;
 }
+.presentationdevalorant a {
+  font-size: 90%;
+}
 
+.presentationdevalorant h2 {
+  font-size: 300%;
+}
 .actualites h2 {
 font-size: 2em;
 }
 
 .actualite-img {
-width: 100%; /* Ajuste les images à la largeur de l'écran */
+width: 100%; 
 }
 
 .titre-actualite {
@@ -916,9 +943,47 @@ bottom: 20px;
 .fleche-haut {
 width: 50px;
 }
+
+.container {
+  padding: 1em;
+}
+
+.container p {
+  font-size: 1em;
+}
+
+.reviews {
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.review {
+  width: 90%; /* Prend presque toute la largeur du mobile */
+  padding: 15px;
+}
+
+.review h3 {
+  font-size: 1.2em;
+}
+
+.stars {
+  font-size: 16px;
+}
+
+.socials p {
+  font-size: 16px;
+}
+
+.icons img {
+  width: 30px; /* Réduit la taille des icônes sociales */
+  height: 30px;
+  margin: 0 5px; /* Réduit l'espace entre les icônes */
+}
 }
 
 @media (min-width: 769px) and (max-width: 980px) {
+
 
   .titre-banniere {
     font-size: 5em;
@@ -927,12 +992,21 @@ width: 50px;
   .banniere {
     height: 30vh;
   }
-  
+
+  .titreaccueil {
+    font-size: 3em;
+  }
+  .presentationdevalorant a {
+  font-size: 130%;
+}
+.presentationdevalorant h2 {
+  font-size: 370%;
+}
   iframe {
     width: 30em;
     height: 16em;
   }
-  .main p {
-    font-size: 12px;  /* Réduction de la taille de la police */
+  main p {
+    font-size: 1em;    
   }
 }
