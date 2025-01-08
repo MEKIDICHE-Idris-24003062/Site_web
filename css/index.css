@@ -41,9 +41,6 @@ font-family: 'Bebas Neue', sans-serif;
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-
-
-
 /* Style de base pour le menu */
 .menu {
   display: flex;
@@ -54,15 +51,12 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 0 1rem;
   box-sizing: border-box;
 }
+
 .menu h2 {
-color: #FF6565;
-margin: 0;
-font-family: "New Rocker";
-font-size: 300%;
-justify-content: center;
+  margin: 0;
 }
 
-.menu a{
+.menu h2 a{
 text-decoration: none;
 font-family: "Jaini", sans-serif;
 color: rgb(150, 16, 150);
@@ -89,6 +83,7 @@ transition: color 0.3s ease;
 .liens-menu.actif {
   display: flex; /* Afficher les liens lorsque le menu est actif */
 }
+
 nav {
   display: flex;
   gap: 5px;
@@ -352,7 +347,6 @@ z-index: 1; /* Assure que le contenu est au-dessus de la bande */
 border: 5px solid #000000; /* Contour rose autour du tableau */
 border-radius: 15px;
 }
-
 
 .tableau::before {
 content: ''; /* Nécessaire pour ajouter un pseudo-élément */
@@ -751,18 +745,7 @@ height: 1.5em;
 margin: 0 20px;
 fill: white;
 }
-.boutton a {
-  display: flex;
-  justify-content: center;
-  background-color: white;
-  width: 100%;
-  height: 100%;
-  border: none;
-  border-radius: 0.5em;
-}
-.boutton a:hover{
-  background-color: red;
-}
+
 
 /* le bouton pour changre de mode  */
 .mode-toggle {
@@ -784,11 +767,6 @@ fill: white;
   background-color: #ff4655;
 }
 
-/* mode sombre */
-body.sombre {
-  background: linear-gradient(to bottom, #2c2c2c, #1a1a1a);
-  color: white;
-}
 
 @media (max-width: 768px) {
 
@@ -833,7 +811,7 @@ body.sombre {
   display: inline-block;
   background: none;
   border: none;
-  font-size: 24px;
+  font-size: 18px;
   cursor: pointer;
   margin-left: auto;
   z-index: 2;
@@ -878,11 +856,6 @@ width: 100%; /* Ajuste les images à la largeur de l'écran */
 .titre-actualite {
 font-size: 1.5em;
 width: 100%;
-}
-
-.tableau {
-gap: 20px;
-padding: 10px;
 }
 
 .arme {
