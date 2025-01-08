@@ -534,34 +534,28 @@ opacity: 0.7;
   .feedback-button:hover {
   background-color: #ffe6e6;
   }
-  
-  .page_agent img {
-  max-width: 5em;   
-  max-height: 5em;        
-  object-fit: cover;   
-  float: right;           
-  align-content: center;
+
+  .page_agent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 10px;
+    padding: 20px;
+    background-color: #0a0a65;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: white;
   }
-  
+    
+  /* Titre des catégories d'agents */
   .page_agent h2 {
-  text-align: justify;
-  font-family: "New Rocker";
-  font-size: 120px;
-  font-style: normal;
-  line-height: 120%; 
-  letter-spacing: -1.2px;
-  background: linear-gradient(180deg, #01053b19.46%, #1a43a939 39.93%);
-  -webkit-background-clip: text;
-  opacity: 0.7; 
-  -webkit-text-fill-color: #01053b19;
+    font-size: 1.8rem;
+    margin: 0;
+    flex: 1;
+    text-align: left;
   }
-  
-  .page_agent p {
-  font-family: inherit;
-  font-weight: 700;
-  text-align: center;
-  }
-  
+
   .Arme {
   display: flex;
   flex-wrap: wrap;
@@ -852,6 +846,29 @@ font-size: 30px;
 font-size:2em;
 }
 
+/* .page_agent {
+  flex-direction: column; 
+  align-items: center; 
+  padding: 10px;
+}
+
+.page_agent h2 {
+  font-size: 1.5rem; 
+  text-align: center; 
+  margin-bottom: 10px; 
+}
+
+.page_agent img {
+  width: 100%; 
+  max-width: 80px; 
+  margin: 10px 0;
+}
+
+.page_agent p {
+  margin: 10px 0; 
+  text-align: center; 
+  font-size: 25px;;
+} */
 
 
 .actualites-conteneur {
