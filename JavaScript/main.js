@@ -17,7 +17,7 @@ function index() {
     const link = document.getElementById('lientheme'); // Le lien qui contient le fichier CSS
     const currentTheme = link.getAttribute('href');
     
-    if (currentTheme === '../css/index.css') { // Mode sombre
+    if (currentTheme === 'css/index.css') { // Mode sombre
         link.setAttribute('href', 'css/sombre.css');
         document.getElementById('toggle-mode').textContent = 'Mode Clair';
         localStorage.setItem('theme', 'sombre');
