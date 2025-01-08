@@ -103,15 +103,6 @@ color: black  ;
 font-family: Arial, sans-serif;
 }	
 
-/* les titres plus petit */
-h2
-{
-font-family: optimizespeed;
-font-size: 300%;
-color:white;
-}
-
-
 /* pas utiliser */
 h3
 {
@@ -212,15 +203,15 @@ font-size: 5em;
 color: white;
 }
 
-
 main p {
-color: white;
-font-size: 3em;
-font-family: 'Julius Sans One', sans-serif;
-line-height: 120%;
-letter-spacing: -0.66px;
-text-align: center;
-}
+  color: rgb(53, 95, 230);
+  font-size: 3em;
+  font-family: 'Julius Sans One', sans-serif;
+  line-height: 120%;
+  letter-spacing: -0.66px;
+  text-align: center;
+  }
+
 main {
 padding: 2em;
 }
@@ -259,11 +250,11 @@ font-size: 55px;
 text-align: center;
 }
 
-.presentation { 
-margin-top: 3em; 
-display: flex;
-justify-content: center;
-width: 100%;
+.presentation {
+  margin-top: 3em; 
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .nom p{
@@ -441,29 +432,7 @@ background-color: rgba(39, 134, 212, 0.911);
 border-radius: 2em;
 }
 
-.explication h2 {
-margin-left: 30px;
-margin-right: 30px;
-}
-
-.explication a {
-margin-left: 30px;
-margin-right: 30px;
-margin-bottom: 10px;
-}
-
-.accueil a {
-text-align: center;
-font-size: 2em;
-color: black;
-font-family: Arial, sans-serif;
-margin-top: 1em; 
-}
-
 .accueil h1 {
-text-decoration: 0em;
-text-align: center;
-font-size: 4em;
 font-family: 'Bebas Neue', sans-serif;
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -486,13 +455,14 @@ opacity: 0.7;
 }
 
 .presentationdevalorant a {
-display: flex;
-justify-content: center;
-margin: 0 auto;
-font-family: 'Julius Sans One';
-color: white;
-width: 90%;
-}
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  font-family: 'Julius Sans One';
+  color: white;
+  width: 90%;
+  }
+
 
 /* le footer */
 .container {
@@ -811,6 +781,10 @@ width: 90%;
   background-color: #ff4655;
 }
 
+iframe {
+  width: 45em;
+  height: 26em;
+}
 
 @media (max-width: 768px) {
 
@@ -875,25 +849,23 @@ font-size: 30px;
   font-size: 2em;
 }
 
-.main p {
-  font-size: 1.5em;  /* Réduction de la taille de la police */
-  line-height: 1.4;  /* Augmentation de l'interligne pour une meilleure lisibilité */
-  letter-spacing: -0.5px;
-}
-
 .actualites h2 {
-font-size: 2em;
+font-size:2em;
 }
 
-.actualite-img {
-width: 100%; /* Ajuste les images à la largeur de l'écran */
-}
 
-.titre-actualite {
-font-size: 1.5em;
-width: 100%;
-}
 
+.actualites-conteneur {
+  text-align: center;
+}
+.actualites-conteneur {
+  display: flex; /* Active le mode Flexbox */
+  flex-direction: column; /* Aligne les éléments en colonne */
+  align-items: center; /* Centre horizontalement */
+  justify-content: center; /* Centre verticalement */
+  margin: 0 auto; /* Centrer le conteneur */
+  
+}
 .arme {
 width: 150px;
 }
@@ -916,6 +888,14 @@ font-size: 2em;
 iframe {
 width: 30em;
 height: 16em;
+}
+
+.presentationdevalorant h2 {
+  font-size: 300%;
+}
+
+.presentationdevalorant a {
+  font-size: 90%;
 }
 
 .agent {
@@ -951,8 +931,48 @@ bottom: 20px;
 
 .fleche-haut {
 width: 30px;
-
 }
+
+.container {
+  padding: 1em;
+}
+
+.container p {
+  font-size: 1em;
+}
+
+.reviews {
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.review {
+  width: 90%; /* Prend presque toute la largeur du mobile */
+  padding: 15px;
+}
+
+.review h3 {
+  font-size: 1.2em;
+}
+
+.stars {
+  font-size: 16px;
+}
+
+.socials p {
+  font-size: 16px;
+}
+
+.icons img {
+  width: 30px; /* Réduit la taille des icônes sociales */
+  height: 30px;
+  margin: 0 5px; /* Réduit l'espace entre les icônes */
+}
+main p {
+
+  font-size: 1em;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 980px) {
@@ -966,10 +986,17 @@ width: 30px;
   }
   
   iframe {
-    width: 30em;
-    height: 16em;
+    width: 35em;
+    height: 20em;
   }
-  .main p {
-    font-size: 12px;  /* Réduction de la taille de la police */
+  
+  .presentationdevalorant a {
+    font-size: 130%;
+  }
+  .presentationdevalorant h2 {
+    font-size: 370%;
+  }
+  main p {
+    font-size: 1em;    
   }
 }
