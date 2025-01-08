@@ -3,8 +3,8 @@ const link = document.querySelectorAll('link[href*=".css"]');
 const button = document.getElementById('theme-btn');
 
 // Définir les chemins des fichiers CSS
-const lightTheme = 'CSS/index.css';
-const darkTheme = 'CSS/sombre.css';
+const lightTheme = 'css/index.css';
+const darkTheme = 'css/sombre.css';
 
 // Vérifier si la page actuelle est index.html
 const isIndexHtml = window.location.pathname.endsWith('index.html');
