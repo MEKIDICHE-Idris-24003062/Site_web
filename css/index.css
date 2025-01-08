@@ -8,6 +8,122 @@ margin: 0;
 padding: 0;
 }
 
+/* Style pour la bannière */
+.filtre {
+position: relative;
+}
+
+.filtre::after {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.3); /* Fond noir avec opacité de 0.3 */
+z-index: 1;  /* S'assure que la superposition est au-dessus de l'image */
+}
+
+/* Page d'accueil */
+.accueil a {
+text-align: center;
+font-size: 2em;
+color: black;
+font-family: Arial, sans-serif;
+margin-top: 1em; 
+}
+
+.titreaccueil {
+text-decoration: 0em;
+text-align: center;
+font-size: 4em;
+font-family: 'Bebas Neue', sans-serif;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+
+
+/* Style de base pour le menu */
+.menu {
+  display: flex;
+  justify-content: space-between;  
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  max-width: 100vw;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.menu h2 {
+  margin: 0;
+}
+
+.menu h2 a{
+text-decoration: none;
+font-family: "Jaini", sans-serif;
+color: rgb(150, 16, 150);
+justify-content: space-evenly; 
+font-size: 40px; 
+margin: 0 60px; 
+transition: color 0.3s ease; 
+}
+
+.liens-menu {
+  display: none;
+  flex-direction: column; /* Disposer les liens verticalement */
+  gap: 10px; /* Espacement entre les liens */
+  background-color: white;
+  position: absolute;
+  top: 65px; /* Positionner en dessous du header */
+  left: 0;
+  right: 0;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Affichage des liens lorsque le menu est actif */
+.liens-menu.actif {
+  display: flex; /* Afficher les liens lorsque le menu est actif */
+}
+nav {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  width: 100%;
+  z-index: 1000;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  }
+  
+  .liens-menu a {
+  text-decoration: none;
+  font-family: "Jaini", sans-serif;
+  color: rgb(14, 8, 14);
+  justify-content: space-evenly; 
+  font-size: 40px; 
+  transition: color 0.3s ease; 
+  }
+  
+  nav a:hover {
+  color: #6e1871; 
+  }
+  
+
+.titre-banniere {
+  font-size: 10em;
+  top: 15%;
+  transform: translate(-50%, -50%);
+  font-family: 'New Rocker';
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  font-weight: bold;
+  text-align: center;
+  }
+
 /* Actualités */
 .actualites {     
 padding: 40px 0;         
@@ -35,13 +151,6 @@ object-fit: cover;
 border-bottom: 5px solid #ddd;
 }
 
-.date {
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-font-size: 20px;            
-color: #000000;  
-text-align: left;              
-}
-
 .titre-actualite {
 font-size: 30px;           
 color: #000000;                
@@ -51,16 +160,11 @@ width: 400px;
 text-align: left;
 }
 
-.titre-banniere {
-font-family: 'New Rocker';
-position: absolute;
-top: 10%;
-left: 50%;
-transform: translate(-50%, -50%);
-font-size: 10em;
-color: rgb(255, 255, 255);
-font-weight: bold;
-text-align: center;
+.date {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 20px;            
+color: #000000;  
+text-align: left;              
 }
 
 .imagedefond {
@@ -130,14 +234,6 @@ width: 80%;
 height: 10%;
 }
 
-
-/* le bas des pages */
-footer {
-color: white;          
-padding: 5%;        
-text-align: center;     
-}
-
 .agent{
 background: var(--podium-cds-color-grey-100);
 font-size: 0;
@@ -160,11 +256,11 @@ align-items: center;
 }
 
 .imagedelagent img {
-  height: 80vh; 
-  max-width: 90%; 
-  object-fit: contain; 
-  max-height: 100%; 
-  width: auto; 
+height: 80vh; 
+max-width: 90%; 
+object-fit: contain; 
+max-height: 100%; 
+width: auto; 
 }
 
 .legrandtitre h1 {
@@ -174,26 +270,27 @@ color: black;
 }
 
 .bouton {
-    position: absolute;
-    top: 100px; 
-    left: 20px;
-  }
-  
-  button {
-    font-family: 'Jaini', sans-serif;
-    padding: 8px 25px; 
-    font-size: 25px; 
-    background-color: #808080; 
-    color: white; 
-    border: none; 
-    border-radius: 5px; 
-    cursor: pointer; 
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-  }
-  
-  button:hover {
-    background-color: #414344; 
-  }
+position: absolute;
+top: 100px; 
+left: 20px;
+}
+
+button {
+font-family: 'Jaini', sans-serif;
+padding: 8px 25px; 
+font-size: 25px; 
+background-color: #808080; 
+color: white; 
+border: none; 
+border-radius: 5px; 
+cursor: pointer; 
+box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+background-color: #414344; 
+}
+
 main p {
 color: white;
 font-size: 3em;
@@ -202,6 +299,7 @@ line-height: 120%;
 letter-spacing: -0.66px;
 text-align: center;
 }
+
 main {
 padding: 2em;
 }
@@ -211,34 +309,6 @@ margin-top: 1em;
 line-height: 1.5;
 }
 
-.menu h2 {
-color: #FF6565;
-margin: 0;
-text-align: center;
-font-family: "New Rocker";
-font-size: 40px;
-display: flex;
-justify-content: flex-start;
-}
-
-.menu {
-display: flex;
-gap: 10px;
-padding: 9px;
-background-color: white;
-width: 100%;
-height: 65px;
-flex-shrink: 0;
-margin-top: auto ;
-}
-
-.menu a{
-text-decoration: none;
-color: black;
-font-weight: bold;
-font-size: 55px;
-text-align: center;
-}
 
 .presentation {
 margin-top: 3em; 
@@ -259,127 +329,83 @@ display: flex;
 width: 100%;
 display: block;
 object-fit: cover;
-height: 400px;
+height: 50vh;
 flex-shrink: 0;
 opacity: 0.4;
 }
 
-.filtre {
-position: relative;
+/* les armes */
+.tableau {
+position: relative; /* Nécessaire pour positionner la bande derrière */
+display: flex; /* Active flexbox */
+flex-wrap: wrap; /* Permet de gérer plusieurs lignes si nécessaire */
+justify-content: center; /* Centre le contenu horizontalement */
+align-items: center; /* Centre le contenu verticalement */
+gap: 50px; /* Espacement entre les armes */
+width: 90%; /* Prend toute la largeur de la page */
+padding: 20px; /* Hauteur de la bande */
+margin: 40px auto; /* Ajoute de l'espace autour et centre horizontalement */
+z-index: 1; /* Assure que le contenu est au-dessus de la bande */
+border: 5px solid #000000; /* Contour rose autour du tableau */
+border-radius: 15px;
 }
 
-.filtre::after {
-content: "";
+
+.tableau::before {
+content: ''; /* Nécessaire pour ajouter un pseudo-élément */
+position: absolute; /* Positionné par rapport à .tableau */
+top: 0;
+left: 0;
+width: 100%; /* Prend toute la largeur de la bande */
+height: 100%; /* Même hauteur que le tableau */
+background-color: rgba(214, 204, 205, 0.7); /* Rose avec 80% d'opacité */
+z-index: -1; /* Place la bande derrière le contenu */
+border-radius: 10px; /* Facultatif : coins arrondis */
+}
+.arme {
+position: relative;
+width: 200px; /* Ajuste cette largeur si nécessaire */
+height: 100%; /* Assure que la hauteur de l'élément suit celle du tableau */
+overflow: hidden;
+border-radius: 10px;
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+cursor: pointer;
+display: flex; /* Ajoute flexbox ici aussi */
+align-items: center; /* Centre l'image verticalement dans .arme */
+justify-content: center;
+transition: all 0.3s ease; /* Centre l'image horizontalement dans .arme */
+}
+
+.arme img {
+width: 100%; /* S'adapte à la largeur du conteneur */
+height: auto; /* Garde les proportions */
+object-fit: contain; /* Ne recadre pas l'image */
+transition: transform 0.3s ease;
+}
+
+.arme:hover img {
+width: 100%; /* S'adapte à la largeur du conteneur */
+height: auto; /* Garde les proportions */
+object-fit: cover;; /* Zoom léger au survol */
+}
+
+.nom {
 position: absolute;
 top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-background-color: rgba(0, 0, 0, 0.3); /* Fond noir avec opacité de 0.3 */
-z-index: 1;  /* S'assure que la superposition est au-dessus de l'image */
-}
-
-nav {
+background-color: rgba(0, 0, 0, 0.6); /* Filtre noir transparent */
 display: flex;
-align-items: center;
-width: 100%;
-z-index: 1000;
-position: sticky;
-top: 0;
-z-index: 100;
-}
-
-nav a {
-text-decoration: none;
-font-family: "Jaini", sans-serif;
-color: black;
-justify-content: space-evenly; 
-font-size: 40px; 
-margin: 0 60px; 
-transition: color 0.3s ease; 
-}
-
-nav a:hover {
-color: #FF6565; 
-}
-
-
-menu a:hover {
-color: #ff4655;
-}
-
-/* les armes */
-.tableau {
-  position: relative; /* Nécessaire pour positionner la bande derrière */
-  display: flex; /* Active flexbox */
-  flex-wrap: wrap; /* Permet de gérer plusieurs lignes si nécessaire */
-  justify-content: center; /* Centre le contenu horizontalement */
-  align-items: center; /* Centre le contenu verticalement */
-  gap: 50px; /* Espacement entre les armes */
-  width: 90%; /* Prend toute la largeur de la page */
-  padding: 20px; /* Hauteur de la bande */
-  margin: 40px auto; /* Ajoute de l'espace autour et centre horizontalement */
-  z-index: 1; /* Assure que le contenu est au-dessus de la bande */
-  border: 5px solid #000000; /* Contour rose autour du tableau */
-  border-radius: 15px;
-}
-
-
-.tableau::before {
-  content: ''; /* Nécessaire pour ajouter un pseudo-élément */
-  position: absolute; /* Positionné par rapport à .tableau */
-  top: 0;
-  left: 0;
-  width: 100%; /* Prend toute la largeur de la bande */
-  height: 100%; /* Même hauteur que le tableau */
-  background-color: rgba(214, 204, 205, 0.7); /* Rose avec 80% d'opacité */
-  z-index: -1; /* Place la bande derrière le contenu */
-  border-radius: 10px; /* Facultatif : coins arrondis */
-}
-.arme {
-  position: relative;
-  width: 200px; /* Ajuste cette largeur si nécessaire */
-  height: 100%; /* Assure que la hauteur de l'élément suit celle du tableau */
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  display: flex; /* Ajoute flexbox ici aussi */
-  align-items: center; /* Centre l'image verticalement dans .arme */
-  justify-content: center;
-  transition: all 0.3s ease; /* Centre l'image horizontalement dans .arme */
-}
-
-.arme img {
-  width: 100%; /* S'adapte à la largeur du conteneur */
-  height: auto; /* Garde les proportions */
-  object-fit: contain; /* Ne recadre pas l'image */
-  transition: transform 0.3s ease;
-}
-
-.arme:hover img {
-  width: 100%; /* S'adapte à la largeur du conteneur */
-  height: auto; /* Garde les proportions */
-  object-fit: cover;; /* Zoom léger au survol */
-}
-
-.nom {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* Filtre noir transparent */
-  display: flex;
-  justify-content: center; /* Centre horizontalement le texte */
-  align-items: center; /* Centre verticalement le texte */
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+justify-content: center; /* Centre horizontalement le texte */
+align-items: center; /* Centre verticalement le texte */
+text-align: center;
+opacity: 0;
+transition: opacity 0.3s ease;
 }
 
 .arme:hover .nom {
-  opacity: 1; /* Le filtre devient visible */
+opacity: 1; /* Le filtre devient visible */
 }
 
 
@@ -406,105 +432,6 @@ margin-right: 30px;
 margin-bottom: 10px;
 }
 
-.accueil a {
-text-align: center;
-font-size: 2em;
-color: black;
-font-family: Arial, sans-serif;
-margin-top: 1em; 
-}
-
-.accueil h1 {
-text-decoration: 0em;
-text-align: center;
-font-size: 4em;
-font-family: 'Bebas Neue', sans-serif;
-text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.accueil p {
-width: 90%; 
-margin: 0 auto;
-}
-
-.presentationdevalorant h2 {
-font-family: "New Rocker";
-font-size: 85px;
-font-style: normal;
-line-height: 120%; 
-letter-spacing: -2.55px;
-background: linear-gradient(180deg, #720000 19.46%, #D80000 39.93%);
--webkit-background-clip: text;
-opacity: 0.7; 
--webkit-text-fill-color: #600000; 
-}
-
-.presentationdevalorant a {
-display: flex;
-justify-content: center;
-margin: 0 auto;
-font-family: 'Julius Sans One';
-color: white;
-width: 90%;
-}
-
-/* le footer */
-.container {
-text-align: center;
-}
-
-.container p {
-color: black;
-font-size: 1.5em;
-}
-.reviews {
-display: flex;
-justify-content: center;
-gap: 20px;
-margin-bottom: 30px;
-}
-
-.review {
-background-color: white;
-border-radius: 15px;
-padding: 20px;
-width: 200px;
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-text-align: left;
-}
-
-.stars {
-font-size: 20px;
-color: gold;
-}
-
-.review h3 {
-margin: 10px 0;
-color: black;
-font-size: 2em;
-}
-
-.commenter {
-font-size: 12px;
-color: gray;
-}
-
-.socials {
-margin-bottom: 20px;
-}
-
-.socials p {
-margin-bottom: 10px;
-color: white;
-font-size: 18px;
-}
-
-.icons img {
-width: 40px;
-height: 40px;
-margin: 0 10px;
-}
-
 .feedback-button {
 background-color: white;
 color: white;
@@ -529,14 +456,14 @@ align-content: center;
 .page_agent h2 {
 text-align: justify;
 font-family: "New Rocker";
-font-size: 60px;
+font-size: 120px;
 font-style: normal;
-line-height: 130%; 
-letter-spacing: -1px;
-background: linear-gradient(180deg, #720000 20%, #D80000 40%);
+line-height: 120%; 
+letter-spacing: -1.2px;
+background: linear-gradient(180deg, #720000 19.46%, #D80000 39.93%);
 -webkit-background-clip: text;
-opacity: 1; 
--webkit-text-fill-color: transparent;
+opacity: 0.7; 
+-webkit-text-fill-color: #600000;
 }
 
 .page_agent p {
@@ -591,22 +518,11 @@ font-size: 2.5em;
 text-align: left;
 }
 
-footer .socials a:hover svg {
-fill: black;
-}
-
-footer .socials a svg {
-width: 1em;
-height: 1.5em;
-margin: 0 20px;
-fill: white;
-}
-
 .image p {
 color: black;
 font-size: 3em;
 text-align: center;
-  margin-top: 10px;
+margin-top: 10px;
 font-weight: bold;
 
 }
@@ -662,11 +578,6 @@ transform: scale(1.1);
 margin-top: 1;
 font-size: 1.5rem;  
 color: white;
-}
-.container {
-text-align: center;
-margin: 0 auto;
-padding: 2em;
 }
 
 .feedback-form {
@@ -727,72 +638,20 @@ border-radius: 5px;
 }
 
 .hautpage {
-  background: rgb(202, 121, 159);
-  border-radius: 20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  right: 50px;
-  bottom: 50px;
-  cursor: pointer;
+background: rgb(202, 121, 159);
+border-radius: 20%;
+display: flex;
+justify-content: center;
+align-items: center;
+position: fixed;
+right: 50px;
+bottom: 50px;
+cursor: pointer;
 }
 
 .fleche-haut {
-  width: 50px;
+width: 50px;
 }
-
-/* Pour le responsive */
-@media (max-width: 1380px) {
-menu {
-gap: 30px;
-align-items: center;
-padding: 2em;
-}
-
-.menu a {
-font-size: 35px;
-transform: translateX(-80px);
-white-space: nowrap;
-}
-
-.menu h2 {
-font-size: 30px; 
-transform: translateX(-20px);
-align-items: center;
-}
-
-nav{
-
-display: flex;
-align-items: center;
-gap: 5px;
-}
-}
-
-@media (max-width: 1100px) {
-menu {
-margin-right: 10px;
-align-items: center;
-}
-
-.menu a {
-font-size: 27px; 
-transform: translateX(-80px);
-white-space: nowrap;
-}
-
-.menu h2 {
-font-size: 22px; 
-transform: translateX(-20px);
-align-items: center;
-}
-
-nav{
-align-items: center;
-gap: 5px
-}
-} 
 
 iframe {
 width: 45em;
@@ -812,29 +671,292 @@ border-radius: 0.5em;
 .boutton a:hover{
 background-color: red;
 }
+
+/* le bas des pages */
+footer {
+color: white;          
+padding: 5%;        
+text-align: center;     
+}
+
+/* le footer */
+.container {
+text-align: center;
+margin: 0 auto;
+padding: 2em;
+}
+
+.container p {
+color: black;
+font-size: 1.5em;
+}
+.reviews {
+display: flex;
+justify-content: center;
+gap: 20px;
+margin-bottom: 30px;
+}
+
+.review {
+background-color: white;
+border-radius: 15px;
+padding: 20px;
+width: 200px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+text-align: left;
+}
+
+.stars {
+font-size: 20px;
+color: gold;
+}
+
+.review h3 {
+margin: 10px 0;
+color: black;
+font-size: 2em;
+}
+
+.commenter {
+font-size: 12px;
+color: gray;
+}
+
+.socials {
+margin-bottom: 20px;
+}
+
+.socials p {
+margin-bottom: 10px;
+color: white;
+font-size: 18px;
+}
+
+.icons img {
+width: 40px;
+height: 40px;
+margin: 0 10px;
+}
+
+footer .socials a:hover svg {
+fill: black;
+}
+
+footer .socials a svg {
+width: 1em;
+height: 1.5em;
+margin: 0 20px;
+fill: white;
+}
+.boutton a {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 0.5em;
+}
+.boutton a:hover{
+  background-color: red;
+}
+
 /* le bouton pour changre de mode  */
-  .mode-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    font-size: 18px;
-    background-color: #414344;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    z-index: 1000;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+.mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #414344;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.mode-toggle:hover {
+  background-color: #ff4655;
+}
+
+/* mode sombre */
+body.sombre {
+  background: linear-gradient(to bottom, #2c2c2c, #1a1a1a);
+  color: white;
+}
+
+@media (max-width: 768px) {
+
+  html, body {
+  background: linear-gradient(to bottom, rgb(163, 37, 119), rgb(219, 51, 84));
+  background-size: cover;
+  background-position: center;
+  }
+
+.menu {
+  align-items: center; 
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  padding:10px;
+  height: auto;
+  position: fixed;
+}
+
+.menu h2 a{ 
+  font-size: 25px; 
+  }
+
+.liens-menu {
+  position: fixed;
+  display: none; /* Masquer le menu par défaut */
+  flex-direction: column;
+  gap: 10px;
+  background-color: white;
+  position: absolute; /* Positionner absolument par rapport au bouton */
+  top: 100%; /* Le menu apparaît juste en dessous du bouton */
+  left: 0;
+  right: 0;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1; /* Assure que le menu est sous le bouton */
+}
+
+/* Affichage du bouton de menu aligné à droite sur les petits écrans */
+.boutonmenu {
+  display: inline-block;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: auto;
+  z-index: 2;
+}
+.liens-menu a {
+  font-size: 30px ;
+}
+
+.titre-banniere {
+  font-size: 4em;
+}
+
+.menu h2 {
+  font-family: "Jaini", sans-serif;
+  color: rgb(150, 16, 150);
+  margin: 0 60px; 
+  font-size: 20px;
+}
+
+.menu a {
+font-size: 30px;
+}
+
+.titreaccueil {
+  font-size: 2em;
+}
+
+.main p {
+  font-size: 1.5em;  /* Réduction de la taille de la police */
+  line-height: 1.4;  /* Augmentation de l'interligne pour une meilleure lisibilité */
+  letter-spacing: -0.5px;
+}
+
+.actualites h2 {
+font-size: 2em;
+}
+
+.actualite-img {
+width: 100%; /* Ajuste les images à la largeur de l'écran */
+}
+
+.titre-actualite {
+font-size: 1.5em;
+width: 100%;
+}
+
+.tableau {
+gap: 20px;
+padding: 10px;
+}
+
+.arme {
+width: 150px;
+}
+
+.explication {
+font-size: 0.9em;
+width: 100%;
+padding: 20px;
+}
+
+.feedback-form {
+width: 90%;
+font-size: 0.8em;
+}
+
+.feedback-form h2 {
+font-size: 2em;
+}
+
+iframe {
+width: 30em;
+height: 16em;
+}
+
+.agent {
+width: 100%;
+padding: 5em;
+border-radius: 10px;
+}
+
+.agent img {
+width: 80%;
+}
+
+.agent .name {
+font-size: 1.2rem;
+}
+
+.duellistes h1 {
+font-size: 1.5rem;
+}
+
+.duellistes .description {
+font-size: 0.9rem;
+}
+
+.banniere {
+height: 20vh;
+}
+
+.hautpage {
+right: 20px;
+bottom: 20px;
+}
+
+.fleche-haut {
+width: 50px;
+}
+}
+
+@media (min-width: 769px) and (max-width: 980px) {
+
+  .titre-banniere {
+    font-size: 5em;
+  }
+
+  .banniere {
+    height: 30vh;
   }
   
-  .mode-toggle:hover {
-    background-color: #ff4655;
+  iframe {
+    width: 30em;
+    height: 16em;
   }
-
-  /* mode sombre */
-  body.sombre {
-    background: linear-gradient(to bottom, #2c2c2c, #1a1a1a);
-    color: white;
+  .main p {
+    font-size: 12px;  /* Réduction de la taille de la police */
   }
-
+}
