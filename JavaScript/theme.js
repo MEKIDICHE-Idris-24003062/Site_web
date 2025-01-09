@@ -1,5 +1,5 @@
 // Fonction pour changer le thème (mode sombre / mode clair)
-function toggleMode() {
+function toggleMod() {
     const link = document.getElementById('lientheme'); // Le lien qui contient le fichier CSS
     const currentTheme = link.getAttribute('href');
     
