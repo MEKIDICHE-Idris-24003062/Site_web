@@ -1051,3 +1051,10 @@ main p {
   font-size: 1em;    
 }
 }
+
+#liens-menu {
+    display: none;
+}
+#liens-menu.actif {
+    display: block;
+}
