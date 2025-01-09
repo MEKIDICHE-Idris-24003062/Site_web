@@ -1,5 +1,5 @@
 // Fonction pour changer le thème (mode sombre / mode clair)
-function toggleMode() {
+function toggleMod() {
     const link = document.getElementById('lientheme'); // Le lien qui contient le fichier CSS
     const currentTheme = link.getAttribute('href');
     
@@ -27,10 +27,4 @@ document.addEventListener('DOMContentLoaded', () => {
         link.setAttribute('href', '../css/index.css');
         button.textContent = 'Mode Sombre';
     }
-
-    // Initialiser selon les préférences système (optionnel)
-    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    if (!savedTheme && prefersDarkScheme) {
-        link.setAttribute('href', '../css/sombre.css');
-        button.textContent = 'Mode Clair';
-    }
+});
