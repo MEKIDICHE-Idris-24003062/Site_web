@@ -67,18 +67,6 @@ margin: 0 60px;
 transition: color 0.3s ease; 
 }
 
-.liens-menu {
-display: none;
-flex-direction: column; 
-gap: 10px; 
-background-color: white;
-position: absolute;
-top: 65px; 
-left: 0;
-right: 0;
-padding: 10px;
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
 
 /* Affichage des liens lorsque le menu est actif */
 .liens-menu.actif {
@@ -1053,8 +1041,17 @@ main p {
 }
 
 #liens-menu {
-    display: none;
+display: none;
+flex-direction: column; 
+gap: 10px; 
+background-color: white;
+position: absolute;
+top: 65px; 
+left: 0;
+right: 0;
+padding: 10px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 #liens-menu.actif {
-    display: block;
+    display: flex;
 }
