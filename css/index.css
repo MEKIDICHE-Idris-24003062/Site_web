@@ -6,6 +6,7 @@ background-attachment: fixed;
 list-style-type: disc;
 margin: 0;
 padding: 0;
+overflow-x: hidden;
 }
 
 /* Style pour la bannière */
@@ -43,17 +44,17 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 /* Style de base pour le menu */
 .menu {
-  display: flex;
-  justify-content: space-between;  
-  background-color: rgb(255, 255, 255);
-  width: 100%;
-  max-width: 100vw;
-  padding: 0 1rem;
-  box-sizing: border-box;
+display: flex;
+justify-content: space-between;  
+background-color: rgb(255, 255, 255);
+width: 100%;
+max-width: 100vw;
+padding: 0 1rem;
+box-sizing: border-box;
 }
 
 .menu h2 {
-  margin: 0;
+margin: 0;
 }
 
 .menu h2 a{
@@ -67,73 +68,73 @@ transition: color 0.3s ease;
 }
 
 .liens-menu {
-  display: none;
-  flex-direction: column; /* Disposer les liens verticalement */
-  gap: 10px; /* Espacement entre les liens */
-  background-color: white;
-  position: absolute;
-  top: 65px; /* Positionner en dessous du header */
-  left: 0;
-  right: 0;
-  padding: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+display: none;
+flex-direction: column; 
+gap: 10px; 
+background-color: white;
+position: absolute;
+top: 65px; 
+left: 0;
+right: 0;
+padding: 10px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Affichage des liens lorsque le menu est actif */
 .liens-menu.actif {
-  display: flex; /* Afficher les liens lorsque le menu est actif */
+display: flex; /* Afficher les liens lorsque le menu est actif */
 }
 
 nav {
-  display: flex;
-  gap: 5px;
-  align-items: center;
-  width: 100%;
-  z-index: 1000;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  }
-  
-  .liens-menu a {
-  text-decoration: none;
-  font-family: "Jaini", sans-serif;
-  color: rgb(14, 8, 14);
-  justify-content: space-evenly; 
-  font-size: 40px; 
-  transition: color 0.3s ease; 
-  }
-  
-  nav a:hover {
-  color: #6e1871; 
-  }
-  
+display: flex;
+gap: 5px;
+align-items: center;
+width: 100%;
+z-index: 1000;
+position: sticky;
+top: 0;
+z-index: 100;
+}
+
+.liens-menu a {
+text-decoration: none;
+font-family: "Jaini", sans-serif;
+color: rgb(14, 8, 14);
+justify-content: space-evenly; 
+font-size: 40px; 
+transition: color 0.3s ease; 
+}
+
+nav a:hover {
+color: #6e1871; 
+}
+
 
 .titre-banniere {
-  font-size: 10em;
-  top: 15%;
-  transform: translate(-50%, -50%);
-  font-family: 'New Rocker';
-  color: rgb(255, 255, 255);
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  font-weight: bold;
-  text-align: center;
-  }
+font-size: 10em;
+top: 15%;
+transform: translate(-50%, -50%);
+font-family: 'New Rocker';
+color: rgb(255, 255, 255);
+position: absolute;
+top: 10%;
+left: 50%;
+font-weight: bold;
+text-align: center;
+}
 
-  .presentationdevalorant h2 {
-    font-family: "New Rocker";
-    font-size: 85px;
-    font-style: normal;
-    line-height: 120%; 
-    letter-spacing: -2.55px;
-    background: linear-gradient(180deg, #720000 19.46%, #D80000 39.93%);
-    -webkit-background-clip: text;
-    opacity: 0.7; 
-    -webkit-text-fill-color: #681616; 
-    }
-    
+.presentationdevalorant h2 {
+  font-family: "New Rocker";
+  font-size: 85px;
+  font-style: normal;
+  line-height: 120%; 
+  letter-spacing: -2.55px;
+  background: linear-gradient(180deg, #720000 19.46%, #D80000 39.93%);
+  -webkit-background-clip: text;
+  opacity: 0.7; 
+  -webkit-text-fill-color: #681616; 
+  }
+  
 /* Actualités */
 .actualites {     
 padding: 40px 0;         
@@ -202,7 +203,7 @@ text-decoration: none;
 font-size: 3em;
 }
 
-/* tout les titres */
+/* tous les titres */
 h1
 {
 text-align: center;
@@ -218,7 +219,7 @@ h2
 {
 font-family: optimizespeed;
 font-size: 300%;
-color: black;
+color: rgb(106, 33, 33);
 }
 
 /* pas utiliser */
@@ -328,13 +329,13 @@ width: 100%;
 }
 
 .presentationdevalorant a {
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  font-family: 'Julius Sans One';
-  color: white;
-  width: 90%;
-  }
+display: flex;
+justify-content: center;
+margin: 0 auto;
+font-family: 'Julius Sans One';
+color: white;
+width: 90%;
+}
 
 .nom p{
 font-size: 3em;
@@ -353,58 +354,58 @@ flex-shrink: 0;
 opacity: 0.4;
 }
 
-/* les armes */
+/* les armes dans le tableau */
 .tableau {
-position: relative; /* Nécessaire pour positionner la bande derrière */
-display: flex; /* Active flexbox */
-flex-wrap: wrap; /* Permet de gérer plusieurs lignes si nécessaire */
-justify-content: center; /* Centre le contenu horizontalement */
-align-items: center; /* Centre le contenu verticalement */
-gap: 50px; /* Espacement entre les armes */
-width: 90%; /* Prend toute la largeur de la page */
-padding: 20px; /* Hauteur de la bande */
-margin: 40px auto; /* Ajoute de l'espace autour et centre horizontalement */
-z-index: 1; /* Assure que le contenu est au-dessus de la bande */
-border: 5px solid #000000; /* Contour rose autour du tableau */
+position: relative;
+display: flex;
+flex-wrap: wrap; 
+justify-content: center; 
+align-items: center;
+gap: 50px; 
+width: 90%; 
+padding: 20px; 
+margin: 40px auto; 
+z-index: 1; 
+border: 5px solid #000000;
 border-radius: 15px;
 }
 
 .tableau::before {
-content: ''; /* Nécessaire pour ajouter un pseudo-élément */
-position: absolute; /* Positionné par rapport à .tableau */
+content: ''; 
+position: absolute; 
 top: 0;
 left: 0;
-width: 100%; /* Prend toute la largeur de la bande */
-height: 100%; /* Même hauteur que le tableau */
-background-color: rgba(214, 204, 205, 0.7); /* Rose avec 80% d'opacité */
-z-index: -1; /* Place la bande derrière le contenu */
-border-radius: 10px; /* Facultatif : coins arrondis */
+width: 100%;
+height: 100%; 
+background-color: rgba(214, 204, 205, 0.7); 
+z-index: -1; 
+border-radius: 10px; 
 }
 .arme {
 position: relative;
-width: 200px; /* Ajuste cette largeur si nécessaire */
-height: 100%; /* Assure que la hauteur de l'élément suit celle du tableau */
+width: 200px; 
+height: 100%; 
 overflow: hidden;
 border-radius: 10px;
 box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 cursor: pointer;
-display: flex; /* Ajoute flexbox ici aussi */
-align-items: center; /* Centre l'image verticalement dans .arme */
+display: flex; 
+align-items: center; 
 justify-content: center;
-transition: all 0.3s ease; /* Centre l'image horizontalement dans .arme */
+transition: all 0.3s ease; 
 }
 
 .arme img {
-width: 100%; /* S'adapte à la largeur du conteneur */
-height: auto; /* Garde les proportions */
-object-fit: contain; /* Ne recadre pas l'image */
+width: 100%; 
+height: auto;
+object-fit: contain; 
 transition: transform 0.3s ease;
 }
 
 .arme:hover img {
-width: 100%; /* S'adapte à la largeur du conteneur */
-height: auto; /* Garde les proportions */
-object-fit: cover;; /* Zoom léger au survol */
+width: 100%; 
+height: auto; 
+object-fit: cover;; 
 }
 
 .nom {
@@ -413,17 +414,18 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-background-color: rgba(0, 0, 0, 0.6); /* Filtre noir transparent */
+background-color: rgba(0, 0, 0, 0.6); 
 display: flex;
-justify-content: center; /* Centre horizontalement le texte */
-align-items: center; /* Centre verticalement le texte */
+justify-content: center;
+align-items: center; 
 text-align: center;
 opacity: 0;
 transition: opacity 0.3s ease;
 }
 
+/* Le filtre devient visible */
 .arme:hover .nom {
-opacity: 1; /* Le filtre devient visible */
+opacity: 1; 
 }
 
 
@@ -446,7 +448,7 @@ margin-right: 30px;
 
 .explication a {
 margin-left: 30px;
-margin-right: 30px;
+margin-right: 80px;
 margin-bottom: 10px;
 }
 
@@ -464,40 +466,40 @@ background-color: #ffe6e6;
 }
 
 .page_agent {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 20px 10px;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  background-color: #c73d3d;
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin: 20px 10px;
+padding: 20px;
+border: 1px solid #ddd;
+border-radius: 8px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+background-color: #c73d3d;
 }
 
 /* Titre des catégories d'agents */
 .page_agent h2 {
-  font-size: 1.8rem;
-  margin: 0;
-  flex: 1;
-  text-align: left;
+font-size: 1.8rem;
+margin: 0;
+flex: 1;
+text-align: left;
 }
 
 /* Images dans les sections */
 .page_agent img {
-  width: 200px;
-  height: auto;
-  border-radius: 8px;
-  margin-left: 20px;
-  flex-shrink: 0;
-  z-index: 1;
+width: 200px;
+height: auto;
+border-radius: 8px;
+margin-left: 20px;
+flex-shrink: 0;
+z-index: 1;
 }
 
 /* Texte des descriptions */
 .page_agent p {
-  flex: 2;
-  margin: 0 20px;
-  text-align: justify;
+flex: 2;
+margin: 0 20px;
+text-align: justify;
 }
 
 .Arme {
@@ -665,6 +667,7 @@ border: none;
 border-radius: 5px;
 }
 
+/* bouton scroll haut de page */
 .hautpage {
 background: rgb(202, 121, 159);
 border-radius: 20%;
@@ -697,7 +700,7 @@ border-radius: 0.5em;
 }
 
 .boutton a:hover{
-background-color: red;
+background-color:  rgb(149, 136, 136);
 }
 
 /* le bas des pages */
@@ -780,86 +783,86 @@ fill: white;
 
 /* le bouton pour changre de mode  */
 .mode-toggle {
-  position: fixed;
-  top: 3em;
-  right: 20px;
-  padding: 10px 20px;
-  font-size: 18px;
-  background-color: #414344;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  z-index: 1000;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+position: fixed;
+top: 3em;
+right: 20px;
+padding: 10px 20px;
+font-size: 18px;
+background-color: #414344;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+z-index: 1000;
+box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .mode-toggle:hover {
-  background-color: #ff4655;
+background-color: #ff4655;
 }
 
 
 @media (max-width: 768px) {
 
-  html, body {
-  background: linear-gradient(to bottom, rgb(163, 37, 119), rgb(219, 51, 84));
-  background-size: cover;
-  background-position: center;
-  }
+html, body {
+background: linear-gradient(to bottom, rgb(163, 37, 119), rgb(219, 51, 84));
+background-size: cover;
+background-position: center;
+}
 
 .menu {
-  align-items: center; 
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 10px;
-  padding:10px;
-  height: auto;
-  position: fixed;
+align-items: center; 
+flex-direction: column;
+align-items: center;
+text-align: center;
+gap: 10px;
+padding:10px;
+height: auto;
+position: fixed;
 }
 
 .menu h2 a{ 
-  font-size: 25px; 
-  }
+font-size: 25px; 
+}
 
 .liens-menu {
-  position: fixed;
-  display: none; /* Masquer le menu par défaut */
-  flex-direction: column;
-  gap: 10px;
-  background-color: white;
-  position: absolute; /* Positionner absolument par rapport au bouton */
-  top: 100%; /* Le menu apparaît juste en dessous du bouton */
-  left: 0;
-  right: 0;
-  padding: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 1; /* Assure que le menu est sous le bouton */
+position: fixed;
+display: none; /* Masque le menu par défaut */
+flex-direction: column;
+gap: 10px;
+background-color: white;
+position: absolute;
+top: 100%; 
+left: 0;
+right: 0;
+padding: 10px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+z-index: 1; 
 }
 
 /* Affichage du bouton de menu aligné à droite sur les petits écrans */
 .boutonmenu {
-  display: inline-block;
-  background: none;
-  border: none;
-  font-size: 18px;
-  cursor: pointer;
-  margin-left: auto;
-  z-index: 2;
+display: inline-block;
+background: none;
+border: none;
+font-size: 18px;
+cursor: pointer;
+margin-left: auto;
+z-index: 2;
 }
 .liens-menu a {
-  font-size: 30px ;
+font-size: 30px ;
 }
 
 .titre-banniere {
-  font-size: 4em;
+font-size: 4em;
 }
 
 .menu h2 {
-  font-family: "Jaini", sans-serif;
-  color: rgb(150, 16, 150);
-  margin: 0 60px; 
-  font-size: 20px;
+font-family: "Jaini", sans-serif;
+color: rgb(150, 16, 150);
+margin: 0 60px; 
+font-size: 20px;
 }
 
 .menu a {
@@ -867,20 +870,21 @@ font-size: 30px;
 }
 
 .titreaccueil {
-  font-size: 2em;
+font-size: 2em;
 }
 
 main p {
-  font-size: 1em;
-  line-height: 1.4;  /* Augmentation de l'interligne pour une meilleure lisibilité */
-  letter-spacing: -0.5px;
+font-size: 1em;
+line-height: 1.4; 
+letter-spacing: -0.5px;
 }
+
 .presentationdevalorant a {
-  font-size: 90%;
+font-size: 90%;
 }
 
 .presentationdevalorant h2 {
-  font-size: 300%;
+font-size: 300%;
 }
 .actualites h2 {
 font-size: 2em;
@@ -899,10 +903,20 @@ width: 100%;
 width: 150px;
 }
 
+.imagedelagent {
+position: relative; 
+}
+
+.imagedelagent img {
+width: 100%; 
+height: 50vh; 
+margin-top: 1px;
+}
 .explication {
 font-size: 0.9em;
 width: 100%;
 padding: 20px;
+margin-top: 90px;
 }
 
 .feedback-form {
@@ -935,35 +949,27 @@ font-size: 1.2rem;
 }
 
 .page_agent {
-  flex-direction: column; /* Empile les éléments en colonne */
-  align-items: center; /* Centre les éléments horizontalement */
-  padding: 10px; /* Réduit les marges internes */
+flex-direction: column; 
+align-items: center; 
+padding: 10px;
 }
 
 .page_agent h2 {
-  font-size: 1.5rem; /* Réduit la taille du titre */
-  text-align: center; /* Centre le titre */
-  margin-bottom: 10px; /* Ajoute de l'espacement avec le texte ou l'image */
+font-size: 1.8rem; 
+text-align: center; 
+margin-bottom: 10px; 
 }
 
 .page_agent img {
-  width: 100%; /* Image prend toute la largeur disponible */
-  max-width: 80px; /* Fixe une largeur maximale pour éviter qu'elle soit trop grande */
-  margin: 10px 0; /* Espacement autour de l'image */
+width: 100%; 
+max-width: 80px; 
+margin: 10px 0;
 }
 
 .page_agent p {
-  margin: 10px 0; 
-  text-align: center; 
-  font-size: 25px;;
-}
-
-.duellistes h1 {
-font-size: 1.5rem;
-}
-
-.duellistes .description {
-font-size: 0.9rem;
+margin: 10px 0; 
+text-align: center; 
+font-size: 25px;;
 }
 
 .banniere {
@@ -980,68 +986,68 @@ width: 50px;
 }
 
 .container {
-  padding: 1em;
+padding: 1em;
 }
 
 .container p {
-  font-size: 1em;
+font-size: 1em;
 }
 
 .reviews {
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
+flex-direction: column;
+align-items: center;
+gap: 10px;
 }
 
 .review {
-  width: 90%; /* Prend presque toute la largeur du mobile */
-  padding: 15px;
+width: 90%; 
+padding: 15px;
 }
 
 .review h3 {
-  font-size: 1.2em;
+font-size: 1.2em;
 }
 
 .stars {
-  font-size: 16px;
+font-size: 16px;
 }
 
 .socials p {
-  font-size: 16px;
+font-size: 16px;
 }
 
 .icons img {
-  width: 30px; /* Réduit la taille des icônes sociales */
-  height: 30px;
-  margin: 0 5px; /* Réduit l'espace entre les icônes */
+width: 30px; 
+height: 30px;
+margin: 0 5px; 
 }
 }
 
 @media (min-width: 769px) and (max-width: 980px) {
 
 
-  .titre-banniere {
-    font-size: 5em;
-  }
+.titre-banniere {
+  font-size: 5em;
+}
 
-  .banniere {
-    height: 30vh;
-  }
+.banniere {
+  height: 30vh;
+}
 
-  .titreaccueil {
-    font-size: 3em;
-  }
-  .presentationdevalorant a {
-  font-size: 130%;
+.titreaccueil {
+  font-size: 3em;
+}
+.presentationdevalorant a {
+font-size: 130%;
 }
 .presentationdevalorant h2 {
-  font-size: 370%;
+font-size: 370%;
 }
-  iframe {
-    width: 30em;
-    height: 16em;
-  }
-  main p {
-    font-size: 1em;    
-  }
+iframe {
+  width: 30em;
+  height: 16em;
+}
+main p {
+  font-size: 1em;    
+}
 }
