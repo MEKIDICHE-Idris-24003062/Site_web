@@ -1,37 +1,36 @@
-// Récupérer les éléments HTML
-const link = document.querySelectorAll('link[href*=".css"]');
-const button = document.getElementById('theme-btn');
-
-// Définir les chemins des fichiers CSS
-const lightTheme = 'css/index.css';
-const darkTheme = 'css/sombre.css';
-
-// Vérifier si la page actuelle est index.html
-const isIndexHtml = window.location.pathname.endsWith('index.html');
-
-// Vérifier le thème actuel
-let currentTheme = link[0].href;
-
-// Ajouter un écouteur d'événement sur le bouton
-button.addEventListener('click', () => {
-  // Alterner entre les thèmes
-  if (currentTheme === lightTheme) {
-    for (let i = 0; i < link.length; i++) {
-      if (isIndexHtml) {
-        link[i].href = link[i].href.replace(lightTheme, darkTheme);
-      } else {
-        link[i].href = link[i].href.replace(lightTheme, '../' + darkTheme);
-      }
+// Fonction pour changer le thème (mode sombre / mode clair)
+function toggleMode() {
+    const link = document.getElementById('lientheme'); // Le lien qui contient le fichier CSS
+    const currentTheme = link.getAttribute('href');
+    
+    if (currentTheme === '../css/index.css') { // Mode sombre
+        link.setAttribute('href', '../css/sombre.css');
+        document.getElementById('toggle-mode').textContent = 'Mode Clair';
+        localStorage.setItem('theme', 'sombre');
+    } else { // Mode clair
+        link.setAttribute('href', '../css/index.css');
+        document.getElementById('toggle-mode').textContent = 'Mode Sombre';
+        localStorage.setItem('theme', 'clair');
     }
-    currentTheme = darkTheme;
-  } else {
-    for (let i = 0; i < link.length; i++) {
-      if (isIndexHtml) {
-        link[i].href = link[i].href.replace(darkTheme, lightTheme);
-      } else {
-        link[i].href = link[i].href.replace(darkTheme, '../' + lightTheme);
-      }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Vérifier la préférence de thème dans localStorage
+    const savedTheme = localStorage.getItem('theme');
+    const link = document.getElementById('lientheme');
+    const button = document.getElementById('toggle-mode');
+    
+    if (savedTheme === 'sombre') {
+        link.setAttribute('href', '../css/sombre.css');
+        button.textContent = 'Mode Clair';
+    } else {
+        link.setAttribute('href', '../css/index.css');
+        button.textContent = 'Mode Sombre';
     }
-    currentTheme = lightTheme;
-  }
-});
+
+    // Initialiser selon les préférences système (optionnel)
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    if (!savedTheme && prefersDarkScheme) {
+        link.setAttribute('href', '../css/sombre.css');
+        button.textContent = 'Mode Clair';
+    }
