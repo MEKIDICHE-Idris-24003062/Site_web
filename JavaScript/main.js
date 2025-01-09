@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', () => {
 // Bouton pour le menu déroulant
     const boutonMenu = document.getElementById('boutonmenu');
     const liensMenu = document.getElementById('liens-menu');
@@ -19,3 +20,5 @@
         });
     }
 });
+
+
