@@ -13,6 +13,6 @@ Un site web interactif qui vous montre le visuel du jeu ainsi que des informatio
 - **HTML, CSS, JavaScript** : Un design simple et efficace pour une navigation agréable.  
 
 ## Faire un tour ! 
-[Aperçu du site](https://idrismm.github.io/Site_web/index.html)
+[Aperçu du site](https://mekidiche-idris-24003062.github.io/Site_web/)
 
   
