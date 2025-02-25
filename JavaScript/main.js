@@ -21,4 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// se qui permet de charger la page en entier avant de l'afficher
+window.addEventListener("load", () => {
+            document.getElementById("preloader").style.display = "none";
+        });
 
