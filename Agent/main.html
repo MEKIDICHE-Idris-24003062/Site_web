@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Jaini&display=swap" rel="stylesheet">
     <link rel="icon" href="../image/favicon.ico">
     <link rel="stylesheet" href="../css/index.css">
-    <link id="lientheme" rel="stylesheet" href="css/sombre.css">
+    <link id="lientheme" rel="stylesheet" href="../css/sombre.css">
 </head>
 
 <body>
@@ -19,50 +19,83 @@
     </div>
     <nav class="menu">
       <h2><a href="../index.html">VALORANT</a></h2>
-      <button id="boutonmenu" aria-label="Afficher le menu">☰</button>
+      <button id="boutonmenu" aria-label="Afficher le menu" aria-expanded="false" aria-controls="liens-menu">☰</button>
       <div id="liens-menu" class="liens-menu">
         <a href="../Agent/main.html">Agents</a>
         <a href="../lesarmes/main.html">Armes</a>
         <a href="../avis/main.html">Votre Avis</a>
       </div>
       <a class="hautpage" href="#ancre">
-        <img class="fleche-haut" src="../image/fleche.svg" alt="fleche-haut">
+        <img class="fleche-haut" src="../image/fleche.svg" alt="Remonter en haut de la page">
       </a>
       <button id="toggle-mode" class="mode-toggle" onclick="toggleMode()">Mode Sombre</button>
-    </nav> 
+    </nav>
 </header>
-    <section class="page_agent">
-      <a href="../Agent/Duellistes.html"><h2> Les Duellistes </h2></a>
-      <a href="../Agent/Duellistes.html"><img src="../image/ClasseDuelliste.png" alt="Duellistes"></a>
-      <p> Les duellistes sont des agents qui sont capables de prendre des duels et de gagner des combats. 
-        Ils sont souvent utilisés pour ouvrir des sites ou pour défendre des sites. 
-      </p>
-    </section>
+    <main class="agents-page">
+      <section class="agents-hero">
+        <div class="agents-hero__content">
+          <span class="agents-hero__badge">Rôles Valorant</span>
+          <h1>Choisissez votre style de jeu</h1>
+          <p>Chaque rôle regroupe des agents conçus pour un objectif précis : prendre l'avantage en duel, contrôler la carte ou protéger vos coéquipiers.</p>
+          <ul class="agents-hero__tags" aria-label="Aspects mis en avant pour chaque rôle">
+            <li>Prise d'espace</li>
+            <li>Initiation</li>
+            <li>Contrôle</li>
+            <li>Protection</li>
+          </ul>
+          <div class="agents-hero__actions">
+            <a class="agents-hero__cta" href="#roles">Explorer les rôles</a>
+            <a class="agents-hero__secondary" href="../avis/main.html">Partager votre avis</a>
+          </div>
+        </div>
+      </section>
 
-    <section class="page_agent">
-      <a href="../Agent/Initiateurs.html"><h2> Les Initiateurs </h2></a>
-      <a href="../Agent/Initiateurs.html"><img src="../image/Initiateurs.png" alt="Initiateurs"></a>
-      <p> Les initiateurs sont des agents qui sont capables de contrôler les zones et 
-        de donner des informations à leur équipe. Ils sont souvent utilisés pour ouvrir 
-        des sites ou pour défendre des sites.
-      </p>
-    </section>
+      <section class="agents-grid" id="roles">
+        <article class="agent-card">
+          <figure class="agent-card__media">
+            <img src="../image/ClasseDuelliste.png" alt="Illustration du rôle Duelliste">
+          </figure>
+          <div class="agent-card__content">
+            <h2>Les Duellistes</h2>
+            <p>Les duellistes prennent l'initiative grâce à leur mobilité et leurs compétences offensives.</p>
+            <a class="agent-card__link" href="../Agent/Duellistes.html">Découvrir les duellistes</a>
+          </div>
+        </article>
 
-    <section class="page_agent">
-      <a href="../Agent/Sentinelles.html"><h2> Les Sentinelles </h2></a>
-      <a href="../Agent/Sentinelles.html"><img src="../image/Sentinelles.png" alt="Sentinelles"></a>
-      <p> Les sentinelles sont des agents qui sont capables de contrôler les zones et de donner des informations à leur équipe. 
-        Ils sont souvent utilisés pour ouvrir des sites ou pour défendre des sites.
-      </p>
-    </section>
+        <article class="agent-card">
+          <figure class="agent-card__media">
+            <img src="../image/Initiateurs.png" alt="Illustration du rôle Initiateur">
+          </figure>
+          <div class="agent-card__content">
+            <h2>Les Initiateurs</h2>
+            <p>Les initiateurs ouvrent la voie en révélant l'ennemi et en perturbant les défenses.</p>
+            <a class="agent-card__link" href="../Agent/Initiateurs.html">Découvrir les initiateurs</a>
+          </div>
+        </article>
 
-    <section class="page_agent">
-      <a href="../Agent/Controleurs.html"><h2> Les Contrôleurs </h2></a> 
-      <a href="../Agent/Controleurs.html"><img src="../image/Controleurs.png" alt="Contrôleurs"></a>
-      <p> Les contrôleurs sont des agents qui sont capables de contrôler les zones et de donner des informations à leur équipe. 
-        Ils sont souvent utilisés pour ouvrir des sites ou pour défendre des sites.
-      </p>
-    </section>
+        <article class="agent-card">
+          <figure class="agent-card__media">
+            <img src="../image/Sentinelles.png" alt="Illustration du rôle Sentinelle">
+          </figure>
+          <div class="agent-card__content">
+            <h2>Les Sentinelles</h2>
+            <p>Les sentinelles sécurisent les zones clés et protègent leurs coéquipiers avec des outils défensifs.</p>
+            <a class="agent-card__link" href="../Agent/Sentinelles.html">Découvrir les sentinelles</a>
+          </div>
+        </article>
+
+        <article class="agent-card">
+          <figure class="agent-card__media">
+            <img src="../image/Controleurs.png" alt="Illustration du rôle Contrôleur">
+          </figure>
+          <div class="agent-card__content">
+            <h2>Les Contrôleurs</h2>
+            <p>Les contrôleurs bloquent les lignes de vue et sculptent la carte pour créer des ouvertures.</p>
+            <a class="agent-card__link" href="../Agent/Controleurs.html">Découvrir les contrôleurs</a>
+          </div>
+        </article>
+      </section>
+    </main>
     <footer>
       <div class="container">
         <div class="reviews">
@@ -85,7 +118,7 @@
             <span class="commenter">Commenté par Inconnu<br>14/03/23</span>
           </section>
         </div>
-      
+
         <div class="socials">
           <p>Suivez Valorant sur leur réseaux</p>
           <div class="icons">
@@ -109,7 +142,7 @@
         </div>
       </div>
       <div> <a href="mailto:idris.mekidiche@etu.univ-amu.fr">Contactez-nous</a> </div>
-    </footer> 
+    </footer>
     <script src="../JavaScript/main.js"></script>
     <script src="../JavaScript/thème.js"></script>
 </body>
