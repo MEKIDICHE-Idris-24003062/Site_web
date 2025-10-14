@@ -2,10 +2,68 @@ document.addEventListener('DOMContentLoaded', () => {
 // Bouton pour le menu déroulant
     const boutonMenu = document.getElementById('boutonmenu');
     const liensMenu = document.getElementById('liens-menu');
+
     if (boutonMenu && liensMenu) {
-        boutonMenu.addEventListener('click', () => {
-            liensMenu.classList.toggle('actif'); // Ajoute/retire la classe 'actif'
+        const navigation = boutonMenu.closest('.menu');
+        const breakpoint = window.matchMedia('(max-width: 768px)');
+
+        const closeMenu = () => {
+            liensMenu.classList.remove('actif');
+            boutonMenu.setAttribute('aria-expanded', 'false');
+        };
+
+        const openMenu = () => {
+            liensMenu.classList.add('actif');
+            boutonMenu.setAttribute('aria-expanded', 'true');
+        };
+
+        const toggleMenu = () => {
+            if (liensMenu.classList.contains('actif')) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        };
+
+        const syncMenuWithViewport = () => {
+            closeMenu();
+        };
+
+        boutonMenu.addEventListener('click', (event) => {
+            event.stopPropagation();
+            toggleMenu();
         });
+
+        liensMenu.addEventListener('click', (event) => {
+            event.stopPropagation();
+            const target = event.target instanceof Element ? event.target.closest('a') : null;
+            if (target) {
+                closeMenu();
+            }
+        });
+
+        document.addEventListener('click', (event) => {
+            const target = event.target instanceof Node ? event.target : null;
+            if (navigation && target && navigation.contains(target)) {
+                return;
+            }
+            closeMenu();
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                closeMenu();
+                boutonMenu.focus();
+            }
+        });
+
+        if (typeof breakpoint.addEventListener === 'function') {
+            breakpoint.addEventListener('change', syncMenuWithViewport);
+        } else if (typeof breakpoint.addListener === 'function') {
+            breakpoint.addListener(syncMenuWithViewport);
+        }
+
+        syncMenuWithViewport();
     }
 
     // Bouton pour remonter en haut de la page avec un défilement fluide
@@ -23,6 +81,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // se qui permet de charger la page en entier avant de l'afficher
 window.addEventListener("load", () => {
-            document.getElementById("preloader").style.display = "none";
-        });
+    const preloader = document.getElementById("preloader");
+    if (preloader) {
+        preloader.style.display = "none";
+    }
+});
 
