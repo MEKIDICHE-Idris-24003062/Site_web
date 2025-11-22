@@ -89,6 +89,16 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background-color: var(--menu-background-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .liens-menu a {
@@ -1157,4 +1167,4 @@ footer .socials a:hover svg {
   main p {
     font-size: 1em;
   }
-}```
+}
