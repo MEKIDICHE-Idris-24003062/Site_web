@@ -68,7 +68,7 @@ body {
 .menu h2 {
   margin: 0;
   font-family: 'Jaini', sans-serif;
-  font-size: 40px;
+  font-size: 50px;
 }
 
 .menu h2 a {
@@ -303,7 +303,6 @@ video {
 .agent {
   background: rgba(0, 0, 0, 0.5);
   font-size: 0;
-  width: 100%;
   scroll-snap-align: start;
   aspect-ratio: 1 / 1.25;
   text-align: center;
@@ -328,7 +327,6 @@ video {
 }
 
 .agent img {
-  width: 100%;
   border-radius: 8px;
 }
 
@@ -396,7 +394,6 @@ button:hover {
   width: 90%;
   padding: 20px;
   margin: 40px auto;
-  border: 5px solid var(--tableau-border-color);
   border-radius: 15px;
   background: transparent;
 }
@@ -461,7 +458,7 @@ button:hover {
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
-  width: 80%;
+  width: 95%;
   padding: 0;
   border-radius: 2em;
 }
@@ -470,6 +467,8 @@ button:hover {
   font-size: 10px;
   max-width: 100%;
   background-color: var(--explication-background-color);
+   margin-top: 70px;
+
 }
 
 .explication h2,
@@ -507,7 +506,7 @@ button:hover {
 .armes p {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: var(--armes-text-color);
-  font-size: 2em;
+  font-size: 3em;
   text-align: left;
   margin: 0 30px 20px;
 }
@@ -656,11 +655,6 @@ button:hover {
   margin: 0 auto;
 }
 
-@media (min-width: 1500px) {
-  .agents-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
 
 .agent-card {
   display: flex;
@@ -908,7 +902,7 @@ footer {
 
 .socials p {
   margin-bottom: 10px;
-  color: var(--socials-text-color);
+  color: var(--text-color-primary);
   font-size: 18px;
 }
 
@@ -917,7 +911,6 @@ footer .socials a svg {
   width: 40px;
   height: 40px;
   margin: 0 10px;
-  fill: var(--social-icon-fill-color);
 }
 
 footer .socials a:hover svg {
@@ -1167,4 +1160,356 @@ footer .socials a:hover svg {
   main p {
     font-size: 1em;
   }
+}
+/* --- Mise en page globale des armes --- */
+.armes {
+    padding-bottom: 50px;
+    width: 95%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* --- Section Explication (Le bloc du haut) --- */
+.explication {
+    /* Garde ton style arrondi et couleur */
+    background-color: var(--explication-background-color); 
+    border-radius: 2em;
+    padding: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: left;
+    display: block; /* Mieux que flex ici pour le texte */
+}
+
+.explication h2 {
+    font-family: 'New Rocker', cursive; /* Ta police ! */
+    font-size: 7em;
+    margin: 0 0 20px 0;
+    color: var(--secondary-heading-color);
+}
+
+.intro-desc {
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 1.8em;
+    color: var(--text-color-primary); /* Utilise ta variable */
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* --- Blocs de Catégorie (Les titres H3 et descriptions) --- */
+.categorie-section {
+    background-color: var(--armes-section-background); /* Ta couleur de fond */
+    border-radius: 2em;
+    padding: 20px 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Un peu plus de relief */
+}
+
+.categorie-section h3 {
+    font-family: 'New Rocker', cursive; /* Ta police */
+    font-size: 3.5em; /* Un peu réduit pour que ce soit plus élégant */
+    color: var(--tertiary-heading-color);
+    text-align: left;
+    margin: 10px 0;
+}
+
+.description-bloc p {
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: var(--paragraph-color);
+    line-height: 1.3;
+}
+
+/* --- GRILLE DES ARMES (Le gros changement) --- */
+/* Remplace ton ancienne classe .tableau */
+.tableau-grille {
+    display: grid;
+    /* Cela crée des colonnes automatiques : ça s'adapte aux écrans ! */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 30px;
+    padding: 20px;
+    justify-items: center;
+}
+
+/* --- Carte Arme Individuelle --- */
+.arme-card {
+    position: relative;
+    width: 100%;
+    max-width: 300px; /* Pour pas que ce soit géant */
+    aspect-ratio: 4/3; /* Garde une forme rectangulaire constante */
+    background: rgba(255, 255, 255, 0.05); /* Légère transparence fond */
+    border-radius: 15px; /* Tes bords arrondis */
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.arme-card img {
+    width: 90%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+/* Effet au survol */
+.arme-card:hover {
+    transform: translateY(-5px); /* Monte un peu */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.arme-card:hover img {
+    transform: scale(1.1) rotate(-2deg); /* L'arme grossit un peu */
+}
+
+/* --- Le Nom sur l'arme (Overlay) --- */
+.nom-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Fond noir transparent */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Caché par défaut */
+    transition: opacity 0.3s ease;
+}
+
+.arme-card:hover .nom-overlay {
+    opacity: 1; /* Apparaît au survol */
+}
+
+.nom-overlay p {
+    font-family: 'New Rocker', cursive; /* On garde la police rock */
+    font-size: 2.5em;
+    color: white;
+    margin: 0;
+    text-align: center;
+}
+
+/* --- Responsivité Mobile --- */
+@media (max-width: 768px) {
+    .tableau-grille {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Plus petit sur mobile */
+        gap: 15px;
+    }
+
+    .explication h2, .categorie-section h3 {
+        font-size: 2.5em;
+        text-align: center;
+    }
+    
+    .intro-desc, .description-bloc p {
+        font-size: 1.2em;
+        text-align: center;
+    }
+}
+
+/* --- Styles spécifiques à la page AVIS --- */
+
+/* Mise en page principale */
+.page-avis {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.avis-container {
+    width: 100%;
+    max-width: 700px; /* Largeur max du formulaire */
+}
+
+/* La carte du formulaire */
+.feedback-card {
+    background-color: rgba(0, 0, 0, 0.75); /* Fond sombre transparent */
+    backdrop-filter: blur(5px); /* Effet flou derrière */
+    padding: 40px;
+    border-radius: 2em; /* Tes bords arrondis */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.feedback-card h2 {
+    font-family: 'New Rocker', cursive;
+    font-size: 3.5em;
+    color: var(--secondary-heading-color);
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.subtitle {
+    font-family: 'Julius Sans One', sans-serif;
+    color: #ccc;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* --- Style du Formulaire --- */
+.styled-form {
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.styled-form label {
+    display: block;
+    font-family: 'Jaini', sans-serif;
+    font-size: 1.8em;
+    color: var(--text-color-primary);
+    margin-bottom: 10px;
+}
+
+/* Inputs Texte et Textarea */
+.styled-form input[type="text"],
+.styled-form textarea {
+    width: 100%;
+    padding: 10px 5px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    font-size: 1.2em;
+    font-family: 'Julius Sans One', sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+.styled-form textarea {
+    resize: vertical;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.styled-form input[type="text"]:focus,
+.styled-form textarea:focus {
+    outline: none;
+    border-color: #ff4655; /* Rouge Valorant */
+}
+
+/* Boutons Radio (Oui/Non) */
+.radio-options {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 1.2em;
+}
+
+.radio-label input[type="radio"] {
+    transform: scale(1.5); /* Grossit le bouton */
+    cursor: pointer;
+    accent-color: #ff4655; /* Couleur du point quand sélectionné */
+}
+
+/* Bouton Envoyer */
+.form-actions {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn-envoyer {
+    display: inline-block;
+    background-color: #ff4655; /* Rouge */
+    color: white;
+    font-family: 'Jaini', sans-serif;
+    font-size: 1.8em;
+    padding: 10px 40px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 5px 15px rgba(255, 70, 85, 0.4);
+}
+
+.btn-envoyer:hover {
+    background-color: white;
+    color: #ff4655;
+    transform: translateY(-3px);
+}
+
+/* --- Footer et Reviews --- */
+.footer-title {
+    font-family: 'New Rocker', cursive;
+    font-size: 2.5em;
+    color: var(--secondary-heading-color);
+    margin-bottom: 30px;
+}
+
+/* Grille des avis (Remplace ton ancien flexbox) */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.review-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.review-card h3 {
+    font-family: 'Jaini', sans-serif;
+    font-size: 2em;
+    margin: 10px 0;
+    color: #ff4655;
+}
+
+.review-card p {
+    font-size: 1.2em;
+    font-family: 'Arial', sans-serif; /* Plus lisible pour les avis */
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.commenter {
+    font-size: 0.9em;
+    opacity: 0.7;
+    font-style: italic;
+}
+
+/* --- Responsive Mobile --- */
+@media (max-width: 768px) {
+    .feedback-card {
+        padding: 20px;
+    }
+    
+    .feedback-card h2 {
+        font-size: 2.5em;
+    }
+    
+    .radio-options {
+        flex-direction: column; /* Les boutons les uns sous les autres sur mobile */
+        gap: 10px;
+    }
+    
+    .reviews-grid {
+        grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+    }
 }
